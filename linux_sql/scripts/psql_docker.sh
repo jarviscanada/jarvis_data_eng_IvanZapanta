@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-#!/bin/bash
-
-echo 'hi'
-=======
 #!/bin/sh
 
 # Capture CLI arguments
