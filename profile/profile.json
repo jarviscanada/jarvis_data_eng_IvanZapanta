@@ -1,0 +1,118 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "GPA: 3.9/4.0"
+      ],
+      "degree": "Software Engineering",
+      "department": "Engineering Technology and Applied Science",
+      "duration": "2021-2023",
+      "school_name": "Centennial College"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Bachelor of Science in Architecture",
+      "department": "Engineering and Architecture",
+      "duration": "2013-2019",
+      "school_name": "University of the Assumption"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta",
+  "highlighted_projects": [
+    {
+      "description": "Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates seamlessly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, a scalable and dependable database management system, ensuring the system's reliability and scalability.",
+      "git_url": null,
+      "name": "Patient Health Monitoring System Web App"
+    },
+    {
+      "description": "Developed a cutting-edge mobile application using Kotlin, featuring a smooth integration of Firebase Authentication for secure user login and authorization. The app efficiently utilizes Firebase Realtime Database for data storage and synchronization. Additionally, it offers a convenient Google sign-in option powered by Google OAuth2. This achievement was the result of close collaboration with the development team to design and implement user-friendly interfaces and feature-rich functionalities.",
+      "git_url": null,
+      "name": "Attendance Reporting and Messaging Mobile App"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Ivan Zapanta",
+  "others": [
+    {
+      "bullets": [
+        "Arts, Painting, Drawing",
+        "Basketball",
+        "Participant, Centennial College Entrepreneurship Program: Collaborated with team of 3 to develop a mobile app that help schools manage their attendance and communication.",
+        "Volunteer, San Fernando Community: Lead team of 10 volunteers building houses, showcasing leadership and teamwork skills."
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
+      "duration": "2023-present",
+      "title": "Software Developer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Javascript",
+      "React/Angular",
+      "C#",
+      "Python",
+      "MySql"
+    ],
+    "familiar": [
+      "Docker",
+      "Kotlin",
+      "React Native",
+      "AWS",
+      "Azure"
+    ],
+    "proficient": [
+      "Java",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "I am a dedicated software developer with a strong academic background. I hold an advanced diploma in Software Engineering and a Bachelor's degree in Architecture. My true passion lies in the constantly evolving software landscape, a realm where innovation knows no boundaries, and the potential for creative problem-solving is limitless. It is an industry that keeps me motivated to stay at the forefront of technology, driving me to learn, adapt, and excel as a developer. I am deeply enthusiastic about building user-friendly and highly efficient solutions through code, harnessing my expertise to bridge gaps in the world of software development."
+}
