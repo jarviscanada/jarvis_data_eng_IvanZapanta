@@ -160,7 +160,6 @@ bash path/to/location > /tmp/host_usage.log
 ```
 
 
-
 # Deployment
 The app was deployed by configuring the host_usage.sh script with execute permissions using the **chmod +x** command, allowing it to be executed as an executable within a Linux environment. Following this, the deployment involved scheduling the script's execution using **crontab**, which automated the process of collecting server usage data or executing other specified tasks at predefined intervals, all without requiring manual intervention.
 
