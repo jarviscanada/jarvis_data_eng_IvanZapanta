@@ -2,9 +2,9 @@
   "education": [
     {
       "awards_achievements": [
-        "GPA: 3.9/4.0"
+        "GPA: 3.9/4.5"
       ],
-      "degree": "Software Engineering",
+      "degree": "Software Engineering Technology",
       "department": "Engineering Technology and Applied Science",
       "duration": "2021-2023",
       "school_name": "Centennial College"
@@ -20,55 +20,21 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta",
   "highlighted_projects": [
     {
-      "description": "Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates seamlessly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, a scalable and dependable database management system, ensuring the system's reliability and scalability.",
+      "description": "Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates smoothly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, ensuring the system's reliability and scalability. Overall, the project generated an efficient healthcare data management system, ultimately contributing to improved patient care and heightened healthcare service efficiency.",
       "git_url": null,
       "name": "Patient Health Monitoring System Web App"
     },
     {
-      "description": "Developed a cutting-edge mobile application using Kotlin, featuring a smooth integration of Firebase Authentication for secure user login and authorization. The app efficiently utilizes Firebase Realtime Database for data storage and synchronization. Additionally, it offers a convenient Google sign-in option powered by Google OAuth2. This achievement was the result of close collaboration with the development team to design and implement user-friendly interfaces and feature-rich functionalities.",
+      "description": "Designed an innovative mobile application aimed at addressing the issue of manual attendance tracking while facilitating efficient communication between parents and teachers. This application was developed using Kotlin and incorporates Firebase Authentication for secure user login and authorization, along with a convenient Google sign-in option powered by Google OAuth2. To ensure efficient data storage and synchronization, the app utilizes Firebase Realtime Database. Additionally, its user-friendly design ensures a straightforward experience for everyone involved, making it a valuable tool for modern education and classroom management.",
       "git_url": null,
       "name": "Attendance Reporting and Messaging Mobile App"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": "/linux_sql",
+      "description": "Developed a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's CentOS 7 Linux cluster. The program was implemented using Linux command lines and Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/release/linux_sql",
       "name": "Cluster Monitor"
-    },
-    {
-      "description": [
-        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      ],
-      "git_url": "/core_java",
-      "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "Ivan Zapanta",
@@ -76,7 +42,6 @@
     {
       "bullets": [
         "Arts, Painting, Drawing",
-        "Basketball",
         "Participant, Centennial College Entrepreneurship Program: Collaborated with team of 3 to develop a mobile app that help schools manage their attendance and communication.",
         "Volunteer, San Fernando Community: Lead team of 10 volunteers building houses, showcasing leadership and teamwork skills."
       ],
@@ -86,7 +51,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
+      "description": "Develop innovative software solutions to drive efficiency, productivity, and user satisfaction. Collaborating with a dynamic team to create cutting-edge applications that solve complex problems and enhance user experiences. Staying current with emerging technologies and best practices to ensure the delivery of high-quality software products.",
       "duration": "2023-present",
       "title": "Software Developer"
     }
@@ -114,5 +79,5 @@
       "Git"
     ]
   },
-  "summary": "I am a dedicated software developer with a strong academic background. I hold an advanced diploma in Software Engineering and a Bachelor's degree in Architecture. My true passion lies in the constantly evolving software landscape, a realm where innovation knows no boundaries, and the potential for creative problem-solving is limitless. It is an industry that keeps me motivated to stay at the forefront of technology, driving me to learn, adapt, and excel as a developer. I am deeply enthusiastic about building user-friendly and highly efficient solutions through code, harnessing my expertise to bridge gaps in the world of software development."
+  "summary": "I am an experienced software developer with a strong background in software engineering. My career is driven by a steadfast enthusiasm for software development, marked by numerous successful projects that have enriched my expertise. I excel in building user-friendly interfaces, efficient solutions, and thrive on staying at the forefront of technology. Proficient in Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, and Git, my dedication lies in innovating and bridging gaps within the software development landscape."
 }
