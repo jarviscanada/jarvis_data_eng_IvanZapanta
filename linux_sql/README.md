@@ -14,28 +14,24 @@ Follow these steps to quickly set up and use the Linux Cluster Monitoring Agent:
 
 - Start a psql instance using psql_docker.sh
 ```bash
-# Start a PostgreSQL instance
-$ ./scripts/psql_docker.sh start
+./scripts/psql_docker.sh start
 ```
 - Create tables using ddl.sql
 ```bash
-# Open the SQL script for table creation in a text editor.
-$ vim sql/ddl.sql
+vim sql/ddl.sql
 ```
 - Insert hardware specs data into the DB using host_info.sh
 ```bash
-# Execute the host_info.sh script to insert hardware specifications data into the database.
-$ bash scripts/host_info.sh localhost 5432 host_agent postgres password
+bash scripts/host_info.sh localhost 5432 host_agent postgres password
 ```
 - Insert hardware usage data into the DB using host_usage.sh
 ```bash
-# Execute the host_usage.sh script to insert hardware usage data into the database.
-$ bash scripts/host_usage.sh localhost 5432 host_agent postgres password
+bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 ```
 - Crontab setup
 ```bash
 # Edit the crontab configuration
-$ crontab -e
+crontab -e
 ```
 
 # Implemenation
@@ -66,36 +62,58 @@ By combining these technologies and tools, the Linux Cluster Monitoring Agent de
   - host_usage.sh continually collects the current host usage metrics, including CPU and memory statistics, and inserts them into the database. This script is scheduled to run at regular intervals, typically triggered by a cron job, such as once per minute.
 
 ## Scripts
-Shell script description and usage 
-- psql_docker.sh
+**Shell script description and usage** (assuming user is on the linux_sql directory)
+- **psql_docker.sh**: This script is used to start/stop the psql container
 ```bash
-# To start/stop psql container
-$ ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
+# Script usage
+# ./scripts/psql_docker.sh start|stop|create [db_username][db_password]
+
+# Example
+# Provision and start PostgreSQL instance with Docker
+./scripts/psql_docker.sh start
 ```
-- host_info.sh
+- **host_info.sh**: This script collects hardware specification data and then inserts the data into the psql instance.
 ```bash
-# To start/stop psql container
-$ ./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
+# Script usage
+# bash scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
+
+# Example
+bash scripts/host_info.sh localhost 5432 host_agent postgres password
 ```
 
-- host_usage.sh
+- **host_usage.sh**: This script collects server usage data and then inserts the data into the psql database.
 ```bash
-# To start/stop psql container
-# Example: ./scripts/host_usage.sh localhost 5432 host_agent postgres password
-$ ./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
+# Script usage
+# bash scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
+
+# Example
+bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 ```
 
-- ddl.sql
+- **ddl.sql**: This file creates two tables (host_info & host_usage) automatically as sample input data.
 ```bash
-# Execute ddl.sql script on the host_agent database against the psql instance
-$ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
+# Initialize database and tables
+psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 ```
 
-- crontab
+- **crontab**: Use to automate tasks.
 ```bash
-# Edit crontab jobs
-$ crontab -e
+# Run to edit crontab jobs
+crontab -e
+
+# Verify that the crontab was successfully created by listing crontab jobs
+crontab -ls
+
+# Verify that the script is running as intended by checking the log file
+cat /tmp/host_usage.sh
 ```
+
+- **queries.sql**: this sql file solves the following business problem:
+  - The first query creates a table to store CPU number groups and populate it with data from the host_info table, organizing and sorting the data by total memory usage within each CPU group.
+
+  - The second query calculates and rounds the average used memory percentage for hosts by combining data from the host_usage and host_info tables. It aims to provide insights into memory usage patterns over time.
+
+  - The third query counts the data points within 5-minute intervals from the host_usage table. It then classifies hosts as "Healthy" or "Failure" based on the number of data points collected within these intervals, helping monitor host data consistency.
 
 ## Database Modeling
 
@@ -134,9 +152,9 @@ This table stores the resource usage data of the hosts over time.
 
 To test bash scripts:
 - Using Debug Mode:
-  Adding **-x** option after the bash script
 ```bash
-$ bash -x ./scripts/host_usage.sh
+# To debug add -x option after the bash script
+bash -x ./scripts/host_usage.sh
 ```
 
 - Check for Syntax Errors
