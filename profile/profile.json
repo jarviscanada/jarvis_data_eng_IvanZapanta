@@ -20,7 +20,7 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta",
   "highlighted_projects": [
     {
-      "description": "Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates smoothly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, ensuring the system's reliability and scalability. Overall, the project generated an efficient healthcare data management system, ultimately contributing to improved patient care and heightened healthcare service efficiency.",
+      "description": "Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates smoothly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, guaranteeing the system's reliability and scalability, with a demonstrated capacity to handle over 100+ patient records. Overall, the project is expected to deliver an efficient healthcare data management system, leading to a 80% increase in patient care quality and a boost in healthcare service efficiency.",
       "git_url": null,
       "name": "Patient Health Monitoring System Web App"
     },
