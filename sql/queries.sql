@@ -391,4 +391,4 @@ FROM
 GROUP BY
     letter
 ORDER BY
-    letter
+    letter;
