@@ -34,8 +34,13 @@
   "jarvis_projects": [
     {
       "description": "Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's CentOS 7 Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.",
-      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/release/linux_sql",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql",
       "name": "Cluster Monitor"
+    },
+    {
+      "description": "Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql",
+      "name": "RDBMS and SQL"
     }
   ],
   "name": "Ivan Zapanta",

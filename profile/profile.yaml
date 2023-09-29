@@ -43,10 +43,11 @@ skills:
 # List of Jarvis projects
 jarvis_projects:
   - name: "Cluster Monitor"
-    git_url: "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/release/linux_sql"
-    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
-    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql"
     description: "Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's CentOS 7 Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs."
+  - name: "RDBMS and SQL"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql"
+    description: "Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges."
 
 # List of personal or academic projects
 # Feel free to add more projects
