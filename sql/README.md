@@ -10,6 +10,56 @@ This repository contains a series of SQL practice exercises focused on enhancing
 
 # SQL Queries
 ###### Table Setup (DDL)
+To set up the required tables, execute the SQL DDL script named clubdata.sql in the chosen database. Ensure the application's database configuration points to the correct database, and validate that the script executes without errors, confirming table creation in the database management tool. Alternatively, the following SQL script can also be executed:
+
+To create the members table:
+```sql
+CREATE TABLE cd.members
+    (
+       memid integer NOT NULL, 
+       surname character varying(200) NOT NULL, 
+       firstname character varying(200) NOT NULL, 
+       address character varying(300) NOT NULL, 
+       zipcode integer NOT NULL, 
+       telephone character varying(20) NOT NULL, 
+       recommendedby integer,
+       joindate timestamp NOT NULL,
+       CONSTRAINT members_pk PRIMARY KEY (memid),
+       CONSTRAINT fk_members_recommendedby FOREIGN KEY (recommendedby)
+            REFERENCES cd.members(memid) ON DELETE SET NULL
+    );
+```
+To create the bookings table:
+```sql
+CREATE TABLE cd.bookings
+(
+    bookid integer NOT NULL,
+    facid integer NOT NULL,
+    memid integer NOT NULL,
+    starttime timestamp NOT NULL,
+    slots integer NOT NULL,
+    CONSTRAINT bookings_pk PRIMARY KEY (bookid),
+    CONSTRAINT fk_bookings_facid FOREIGN KEY (facid) REFERENCES cd.facilities(facid),
+    CONSTRAINT fk_bookings_memid FOREIGN KEY (memid) REFERENCES cd.members(memid)
+);
+```
+
+To create the facilities table:
+```sql
+CREATE TABLE cd.facilities
+(
+    facid integer NOT NULL,
+    name character varying(100) NOT NULL,
+    membercost numeric NOT NULL,
+    guestcost numeric NOT NULL,
+    initialoutlay numeric NOT NULL,
+    monthlymaintenance numeric NOT NULL,
+    CONSTRAINT facilities_pk PRIMARY KEY (facid)
+);
+```
+
+
+###### Entity-Relationship Diagram
 ![Clubdata-Table Setup](./assets/table-setup.png)
 
 ### MODIFYING DATA
@@ -66,7 +116,7 @@ DELETE FROM cd.bookings;
 TRUNCATE cd.bookings;
 ```
 
-######Question 6: We want to remove member 37, who has never made a booking, from our database. How can we achieve that?
+###### Question 6: We want to remove member 37, who has never made a booking, from our database. How can we achieve that?
 ```sql
 DELETE FROM cd.members;
 WHERE memid = 37; 
