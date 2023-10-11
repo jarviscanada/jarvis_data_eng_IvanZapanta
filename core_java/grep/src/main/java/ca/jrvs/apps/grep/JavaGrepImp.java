@@ -39,15 +39,15 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void process() throws IOException {
-    List<String> lines = new ArrayList<>();
+    List<String> matchedLines = new ArrayList<>();
     for (File file : listFiles(rootPath)) {
       for (String line : readLines(file)) {
         if (containsPattern(line)) {
-          lines.add(line);
+          matchedLines.add(line);
         }
       }
     }
-    writeToFile(lines);
+    writeToFile(matchedLines);
   }
 
   @Override
