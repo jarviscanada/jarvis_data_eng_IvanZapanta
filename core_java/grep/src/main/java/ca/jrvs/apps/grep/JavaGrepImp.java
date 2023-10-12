@@ -39,21 +39,21 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void process() throws IOException {
-    List<String> matchedLines = new ArrayList<>();
+    List<String> lines = new ArrayList<>();
     for (File file : listFiles(rootPath)) {
       for (String line : readLines(file)) {
         if (containsPattern(line)) {
-          matchedLines.add(line);
+          lines.add(line);
         }
       }
     }
-    writeToFile(matchedLines);
+    writeToFile(lines);
   }
 
   @Override
-  public List<File> listFiles(String rootDir) {
+  public List<File> listFiles(String rootPath) {
     List<File> fileList = new ArrayList<>();
-    File root = new File(rootDir);
+    File root = new File(rootPath);
     File[] filesToCheck;
     if (root.isDirectory()) {
       filesToCheck = root.listFiles();
