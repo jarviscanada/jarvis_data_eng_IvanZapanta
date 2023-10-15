@@ -41,6 +41,11 @@
       "description": "Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql",
       "name": "RDBMS and SQL"
+    },
+    {
+      "description": "Developed a Java Grep application, a Java-based counterpart of Linux's grep command, facilitating the search for specific regular expression patterns within a root directory, with recursive search capabilities and the option to specify an output file for results. The application has been containerized into a Docker image, readily accessible on DockerHub. The development involved leveraging Java for core functionality, Lambda and Stream APIs for efficient data processing, Docker for containerization, Maven for project management, and IntelliJ as the integrated development environment. This results in successfully creating a powerful, user-friendly tool for text data management, with the added convenience of cross-platform accessibility through Docker containerization.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/core_java/grep",
+      "name": "Grep App"
     }
   ],
   "name": "Ivan Zapanta",
