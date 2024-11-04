@@ -11,13 +11,14 @@ Key technologies used in the project include:
 # Quick Start
 Follow these steps to quickly set up and use the Linux Cluster Monitoring Agent **(assuming the user is in the linux_sql directory)**:
 
-Start a PostgreSQL instance by running the **psql_docker.sh** script.
+To start a PostgreSQL instance, run the **psql_docker.sh** script.
 ```bash
 ./scripts/psql_docker.sh start
 ```
+>
+>
 
-<p></p>
-Create tables using the **ddl.sql**
+To create sample tables, use the **ddl.sql**
 
 ```bash
 psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
@@ -26,15 +27,17 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 **Note**: If tests data are uncommented and added, remove them afterward to avoid this error when running_host info and host_usage scripts:
 
 ![DB_Error](./assets/db_error.png)
-<p></p>
+>
+>
 
-Insert hardware specs data into the DB by running the **host_info.sh** script.
+To isert hardware specs data into the DB, run the **host_info.sh** script.
 ```bash
 bash scripts/host_info.sh localhost 5432 host_agent postgres password
 ```
+>
+>
 
-<p></p>
-Insert hardware usage data into the DB by running the **host_usage.sh** script.
+To insert hardware usage data into the DB, run the **host_usage.sh** script.
 ```bash
 bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 ```
