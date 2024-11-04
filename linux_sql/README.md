@@ -15,8 +15,7 @@ To start a PostgreSQL instance, run the **psql_docker.sh** script.
 ```bash
 ./scripts/psql_docker.sh start
 ```
->
->
+<br>&nbsp;<br>&nbsp;<br>
 
 To create sample tables, use the **ddl.sql**
 
@@ -27,16 +26,13 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 **Note**: If tests data are uncommented and added, remove them afterward to avoid this error when running_host info and host_usage scripts:
 
 ![DB_Error](./assets/db_error.png)
->
->
+<br>&nbsp;<br>&nbsp;<br>
 
 To isert hardware specs data into the DB, run the **host_info.sh** script.
 ```bash
 bash scripts/host_info.sh localhost 5432 host_agent postgres password
 ```
->
->
-
+<br>&nbsp;<br>&nbsp;<br>
 To insert hardware usage data into the DB, run the **host_usage.sh** script.
 ```bash
 bash scripts/host_usage.sh localhost 5432 host_agent postgres password
@@ -44,6 +40,7 @@ bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 
 **Note:** If you encounter a syntax error similar to the one below when running the `host_info` and `host_usage` scripts, it may be due to your system outputting a different version of `lscpu` or `vmstat` that conflicts with the `grep` commands used in the scripts.
+
 ![Grep_Error](./assets/grep_error.png)
 
 ## Automation
@@ -52,7 +49,7 @@ Set up/ edit the crontab configuration by running the command:
 crontab -e
 ```
 
-# Implemenation
+# Implementation
 The Linux Cluster Monitoring Agent has been implemented using different technologies and tools to ensure efficient data collection and management. Below are the key components of the implementation:
 
 - **PostgreSQL**: -for storing and managing the collected data.
@@ -88,6 +85,7 @@ By combining these technologies and tools, the Linux Cluster Monitoring Agent de
 # Example
 ./scripts/psql_docker.sh start
 ```
+<br>&nbsp;<br>&nbsp;<br>
 
 **host_info.sh**: collects hardware specification data and then inserts the data into the psql instance.
 ```bash
@@ -97,6 +95,7 @@ By combining these technologies and tools, the Linux Cluster Monitoring Agent de
 # Example
 bash scripts/host_info.sh localhost 5432 host_agent postgres password
 ```
+<br>&nbsp;<br>&nbsp;<br>
 
 **host_usage.sh**: collects server usage data and then inserts the data into the psql database.
 ```bash
@@ -106,12 +105,14 @@ bash scripts/host_info.sh localhost 5432 host_agent postgres password
 # Example
 bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 ```
+<br>&nbsp;<br>&nbsp;<br>
 
 **ddl.sql**: creates two tables (host_info & host_usage) automatically as sample input data.
 ```bash
 # Initialize database and tables
 psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 ```
+<br>&nbsp;<br>&nbsp;<br>
 
 **crontab**- automates tasks.
 ```bash
@@ -124,6 +125,7 @@ crontab -ls
 # Verify that the script is running as intended by checking the log file
 cat /tmp/host_usage.sh
 ```
+<br>&nbsp;<br>&nbsp;<br>
 
 **queries.sql**: this sql file solves the following business problem:
   - The first query creates a table to store CPU number groups and populate it with data from the host_info table, organizing and sorting the data by total memory usage within each CPU group.
