@@ -10,7 +10,7 @@ This repository contains a series of SQL practice exercises focused on enhancing
 
 # SQL Queries
 ###### Table Setup (DDL)
-To set up the required tables, execute the SQL DDL script named clubdata.sql in the chosen database. Ensure the application's database configuration points to the correct database, and validate that the script executes without errors, confirming table creation in the database management tool. Alternatively, the following SQL script can also be executed:
+To set up the required tables, execute the SQL DDL script named `clubdata.sql` in the chosen database. Ensure the application's database configuration points to the correct database, and validate that the script executes without errors, confirming table creation in the database management tool. Alternatively, the following SQL script can also be executed:
 
 To create the members table:
 ```sql
@@ -58,8 +58,9 @@ CREATE TABLE cd.facilities
 );
 ```
 
+<br>
 
-###### Entity-Relationship Diagram
+### Entity-Relationship Diagram
 ![Clubdata-Table Setup](./assets/table-setup.png)
 
 ### MODIFYING DATA
@@ -121,6 +122,7 @@ Question 6: We want to remove member 37, who has never made a booking, from our 
 DELETE FROM cd.members;
 WHERE memid = 37; 
 ```
+<br>
 
 ### BASICS
 
@@ -183,6 +185,7 @@ WHERE
     membercost > 0 AND
     (membercost < monthlymaintenance/50);
 ```
+<br>
 
 ### JOIN
 
@@ -267,6 +270,7 @@ FROM
 ORDER BY
     MEMBER;
 ```
+<br>
 
 ### AGGREGATION
 
@@ -417,6 +421,7 @@ FROM
 WHERE
     RANK = 1
 ```
+<br>
 
 ### STRING
 
