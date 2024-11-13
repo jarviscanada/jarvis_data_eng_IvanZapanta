@@ -1,9 +1,9 @@
-# IntelliJ IDEA
-.idea/
-
-# Maven
 target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
 *.iml
-*.ipr
-*.iws
-.idea_modules/
+.idea/
+.eclipse
