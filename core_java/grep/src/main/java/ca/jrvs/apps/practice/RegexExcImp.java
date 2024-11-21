@@ -5,8 +5,9 @@ import org.apache.log4j.BasicConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class RegexExcImp implements RegexExc{
+public class RegexExcImp implements RegexExc {
   final Logger logger = LoggerFactory.getLogger(RegexExc.class);
+
   public static void main(String[] args) {
     BasicConfigurator.configure();
 
@@ -43,4 +44,5 @@ public class RegexExcImp implements RegexExc{
     Pattern emptylinepattern = Pattern.compile("^\\s*$");
     return emptylinepattern.matcher(line).matches();
   }
+
 }

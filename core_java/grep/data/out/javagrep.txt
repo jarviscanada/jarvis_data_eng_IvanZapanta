@@ -1,0 +1,45 @@
+public interface JavaGrep {
+public class JavaGrepImp implements JavaGrep {
+  public static void main(String[] args) {
+  public void process() throws IOException {
+  public List<File> listFiles(String rootPath) {
+  public List<String> readLines(File inputFile) {
+  public boolean containsPattern(String line) {
+  public void writeToFile(List<String> lines) throws IOException {
+  public String getRootPath() {
+  public void setRootPath(String rootPath) {
+  public String getRegex() {
+  public void setRegex(String regex) {
+  public String getOutFile() {
+  public void setOutFile(String outFile) {
+public class JavaGrepLambdaImp extends JavaGrepImp {
+  public static void main(String[] args) {
+  public List<String> readLines(File inputFile) {
+  public List<File> listFiles(String rootPath) {
+public class HelloWorld {
+    public static void main(String args[]) {
+public class LambaStreamExcImp implements LambdaStreamExc {
+  public static void main(String[] args) {
+  public Stream<String> createStrStream(String... strings) {
+  public Stream<String> toUpperCase(String... strings) {
+  public Stream<String> filter(Stream<String> stringStream, String pattern) {
+  public IntStream createIntStream(int[] arr) {
+  public <E> List<E> toList(Stream<E> stream) {
+  public List<Integer> toList(IntStream intStream) {
+  public IntStream createIntStream(int start, int end) {
+  public DoubleStream squareRootIntStream(IntStream intStream) {
+  public IntStream getOdd(IntStream intStream) {
+  public Consumer<String> getLambdaPrinter(String prefix, String suffix) {
+  public void printMessages(String[] messages, Consumer<String> printer) {
+  public void printOdd(IntStream intStream, Consumer<String> printer) {
+  public Stream<Integer> flatNestedInt(Stream<List<Integer>> ints) {
+public interface LambdaStreamExc {
+public interface RegexExc {
+  public boolean matchJpeg(String filename);
+  public boolean matchIp(String ip);
+  public boolean isEmptyLine(String line);
+public class RegexExcImp implements RegexExc {
+  public static void main(String[] args) {
+  public boolean matchJpeg(String filename) {
+  public boolean matchIp(String ip) {
+  public boolean isEmptyLine(String line) {

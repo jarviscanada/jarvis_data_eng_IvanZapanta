@@ -3,7 +3,7 @@ package ca.jrvs.apps.practice;
 public interface RegexExc {
 
   /**
-   * return true id filename extension is jpg or jpeg (case sensitive)
+   * return true if filename extension is jpg or jpeg (case sensitive)
    *
    * @param filename
    * @return
@@ -12,7 +12,7 @@ public interface RegexExc {
 
   /**
    * return true if ip is valid
-   * to simplify the problem, IP address range is from 0.0.0.0 to 999.999.999.999
+   * IP range = 0.0.0.0 to 999.999.999.999
    *
    * @param ip
    * @return

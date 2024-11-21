@@ -1,5 +1,15 @@
 # Introduction
-The Java Grep application is a Java version of the **grep** command found in Linux's bash terminal. This program can be used to search for a given regular expression pattern within a root directory, and it operates recursively. It identifies matching lines and allows users to specify an output file to save the results. Additionally, the application is packed as a Docker image, which users can easily retrieve from DockerHub for their own usage. The development of this application involves technologies such as Docker, Java, Lambda and Stream APIs, Maven, and IntelliJ.
+The Java Grep application is a Java version of the `grep` command in Linux. This program can be used to recursively search for a given Regex (regular expression) pattern. It identifies matching lines and allows users to specify an output file to save the results. Additionally, the application is containerized as a Docker image, which users can easily retrieve from DockerHub.
+# Technologies Used
+The development of this application involves technologies such as:
+- Java
+- Maven
+- Java Regex APIs ( Pattern, Matcher) `java.util.regex`
+- Java IO APIs (BufferedReader, BufferedWriter, File FileReader, FileWriter) `java.io`
+- Docker
+- Logging Frameworks (BasicConfigurator,Logger,LoggerFactory) `log4j` `slf4j`
+- IntelliJ IDE (recommended)
+
 
 # Quick Start
 ```bash
@@ -12,14 +22,16 @@ java -cp target/grep-1.0-SNAPSHOT.jar ca.jrvs.apps.grep.JavaGrepImp [regex] [roo
 #View the output file of the matched lines
 cat [outputFile]
 ```
-| Argument | Description                            |
-|----------|:---------------------------------------|
-| regex    | Regex pattern to be used for searching |
-| rootPath | Root directory to recursively search   |
-| outFile  | Output file to save the retrived data  |
+| Argument | Description                             |
+|----------|:----------------------------------------|
+| regex    | Regex pattern to be used for searching. |
+| rootPath | Root directory to recursively search.   |
+| outFile  | Output file to save the retrived data.  |
 
-# Implemenation
-The Java Grep application requires a process method that defines the operations that are taking place. The pseudocode of process() method is as follows:
+# Implementation
+The app requires a process method that defines the operations that are taking place. 
+
+The pseudocode of process() method is as follows:
 ```bash
 matchedLines[]
 for file in listFilesRecursively(rootDir)
@@ -30,13 +42,17 @@ writeToFile(matchedLines)
 ```
 
 ## Performance Issue
-The Java Grep Application encounters performance problems when handling extremely large files due to its initial approach of storing every line in memory. However, by incorporating Java Stream and Lambda capabilities, as seen in the JavaGrepLambdaImp class, this memory concern is resolved. Java Streams enable functional programming like map-reduce transformations on collections without the need to retain data in memory, mitigating the previous memory-related issues.
+The app encounters performance problems when handling extremely large files due to its initial approach of storing every line in memory. However, by incorporating Java Stream and Lambda capabilities, as seen in the JavaGrepLambdaImp class, this memory concern is resolved. 
+
+Java Streams enable functional programming like map-reduce transformations on collections without the need to retain data in memory, mitigating the previous memory-related issues.
 
 # Test
 All tests were conducted manually using various sample files of different sizes to compare results and enhance read and write efficiency. Additionally, JUnit was used to automate and simplify the testing process, ensuring the accuracy of the application's functionality.
 
 # Deployment
-The Java Grep application was packaged into a Docker image and made available on DockerHub for convenient access and usage. To obtain the Docker image and use the application, please follow the provided steps:
+The app was containerized into a Docker image and is available on DockerHub for convenient access and usage. 
+
+To obtain the Docker image and use the application, please follow the provided steps:
 ```bash
 # Pull the image from DockerHub
 docker/pull ivanzapanta123/grep
@@ -46,6 +62,6 @@ docker run --rm -v `pwd` /data:/data -v `pwd` /log:/log ivanzapanta123/grep .[re
 ```
 
 # Improvement
-- Develop a user-friendly graphical user interface (GUI) for the application to make it more accessible to users who are not comfortable with the command line.
-- Allow users to select or input regular expressions from a library of commonly used patterns to simplify the search process.
-- Provide various output options, such as displaying results in the console, saving them to a file, or sending them to other applications for further processing.
+- Create a user-friendly GUI for easier access, especially for non-technical users.
+- Offer a library of common regular expressions for simplified search input.
+- Provide multiple output options: display results, save to file, or send to other apps.

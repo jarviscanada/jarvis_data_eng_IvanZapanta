@@ -17,20 +17,21 @@ public interface JavaGrep {
   /**
    * Traverse a given directory and return all files
    *
-   * @param rootDir
-   * @return
+   * @param rootDir input directory
+   * @return files under rootDir
    */
   List<File> listFiles(String rootDir);
 
   /**
    * Read a file and return all the lines
-   * <p>
-   * FileReader: Reads characters from a file in Java. BufferedReader: Efficiently reads text from a
-   * file by buffering data. Character Encoding: Specifies how characters are represented in binary
-   * form.
    *
-   * @param inputFile
-   * @return
+   * FileReader reads characters from a file in Java.
+   * BufferedReader reads text from a file by buffering data.
+   * Character Encoding specifies how characters are represented in binary form.
+   *
+   * @param inputFile file to be read
+   * @return lines
+   * @throws IllegalArgumentException if a given inputFile is not a file
    */
   List<String> readLines(File inputFile);
 
@@ -38,16 +39,20 @@ public interface JavaGrep {
   /**
    * check if a line contains regex pattern (passed by user)
    *
-   * @param line
-   * @return
+   * @param line input string
+   * @return true if there is a match
    */
   boolean containsPattern(String line);
 
   /**
    * Write lines to a file
    *
-   * @param lines
-   * @throws IOException
+   * FileOutputStream is a class used to write raw bytes to a file in Java.
+   * OutputStreamWriter is a class that bridges byte streams to character streams, converting bytes to characters using a specified encoding.
+   * BufferedWriter is a class that writes text to a file with efficient buffering to reduce the number of write operations.
+   *
+   * @param lines matched line
+   * @throws IOException if write failed
    */
   void writeToFile(List<String> lines) throws IOException;
 
