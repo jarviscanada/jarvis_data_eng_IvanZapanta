@@ -65,4 +65,3 @@ echo 'Commands: start|stop|create'
 exit 1
 ;;
 esac
->>>>>>> feature/psql_docker
