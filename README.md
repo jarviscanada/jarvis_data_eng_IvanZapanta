@@ -1,21 +1,21 @@
 # Ivan Zapanta . Jarvis Consulting
 
-I am a backend developer who excels in building efficient solutions and user-friendly interfaces, and I thrive on staying at the forefront of technology. I began my career in architecture but have since discovered a deep passion for software engineering. I've gained valuable experience through personal and school projects, making me a skilled professional in JavaScript, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, and other technologies. My passion for software continues to drive me, and I am eager to leverage my design and technology skills to make a meaningful impact in the ever-evolving tech industry.
+I am a software developer with a passion for solving problems and piecing together ideas into tangible solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I'm driven by the belief that innovative solutions are always within reach, and my goal is to create impactful software that addresses real-world business challenges. At Jarvis, I work alongside a talented team, developing practical software that focuses on delivering value and meeting business needs.  As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
 
 ## Skills
 
-**Proficient:** Javascript, C#, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Spring Boot/Maven, Python, Agile/Scrum, Git
 
-**Competent:** Java, React/Angular, Linux/Bash, Python, MySql
+**Competent:** JavaScript, React/Angular, NodeJs, Docker, C#
 
-**Familiar:** Docker, Kotlin, React Native, AWS, Azure
+**Familiar:** AWS, Azure, Kotlin, React Native, Tableau
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql)]: Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's CentOS 7 Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql)]: Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.
 
 **RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql)]: Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges.
 
@@ -36,12 +36,11 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 ## Education
 **Centennial College (2021-2023)**, Software Engineering Technology, Engineering Technology and Applied Science
 - Achieved Honors Distinction
-- GPA: 3.9/4.5
 
 **University of the Assumption (2013-2019)**, Bachelor of Science in Architecture, Engineering and Architecture
 
 
 ## Miscellaneous
-- Arts, Painting, Drawing: Engaged in various artistic endeavors, including acrylic painting, drafting, and mural creation.
-- Participant, Centennial College Entrepreneurship Program: Collaborated with team of 3 to develop a mobile app that help schools manage their attendance and communication.
-- Volunteer, San Fernando Community: Lead team of 10 volunteers building houses, showcasing leadership and teamwork skills.
+- Engaged in various artistic endeavors, including acrylic painting, drawing, and mural creation.
+- Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop a mobile app designed to help schools manage attendance and communication.
+- Led a team in the building residential structures and demonstrating strong leadership and teamwork skills.
