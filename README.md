@@ -1,36 +1,36 @@
-# Ivan Zapanta . Jarvis Consulting
+# Ivan Joshua Zapanta . Jarvis Consulting
 
-I am a software developer with a passion for solving problems and piecing together ideas into tangible solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I'm driven by the belief that innovative solutions are always within reach, and my goal is to create impactful software that addresses real-world business challenges. At Jarvis, I work alongside a talented team, developing practical software that focuses on delivering value and meeting business needs.  As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
+I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe that innovative solutions are always possible, and my goal is to create impactful software that addresses real-world business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
 
 ## Skills
 
 **Proficient:** Java, Spring Boot/Maven, Python, Agile/Scrum, Git
 
-**Competent:** JavaScript, React/Angular, NodeJs, Docker, C#
+**Competent:** JavaScript, React/Angular, Linux/Bash, NodeJs, C#
 
-**Familiar:** AWS, Azure, Kotlin, React Native, Tableau
+**Familiar:** Docker, AWS, React Native, Kotlin, Tableau
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql)]: Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/linux_sql)]: Developed a solution to track hardware specs and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team. The solution used Bash scripts for implementation, with PostgreSQL as the database. Agent scripts ran via cron, and the source code was managed on GitHub with Git. Docker was used for database provisioning, making deployment easier. This resulted in an MVP that successfully met the LCA team's needs.
 
-**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql)]: Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges.
+**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/sql)]: Completed series of SQL queries through practice exercise using PostgreSQL. The exercises covered various SQL concepts, including basic queries, JOIN operations, aggregation, and string manipulation. Overall, the project helped me enhance my SQL proficiency by solving different query challenges.
 
-**Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/core_java/grep)]: Developed a Java Grep application, a Java-based counterpart of Linux's grep command, facilitating the search for specific regular expression patterns within a root directory, with recursive search capabilities and the option to specify an output file for results. The application has been containerized into a Docker image, readily accessible on DockerHub. The development involved leveraging Java for core functionality, Lambda and Stream APIs for efficient data processing, Docker for containerization, Maven for project management, and IntelliJ as the integrated development environment. This results in successfully creating a powerful, user-friendly tool for text data management, with the added convenience of cross-platform accessibility through Docker containerization.
+**Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/grep)]: Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.
 
 
 ## Highlighted Projects
-**Patient Health Monitoring System Web App**: Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates smoothly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, guaranteeing the system's reliability and scalability, with a demonstrated capacity to handle over 100+ patient records. Overall, the project is expected to deliver an efficient healthcare data management system, leading to a 80% increase in patient care quality and a boost in healthcare service efficiency.
+**Patient Health Tracker App**: Developed a health tracking application using React and JavaScript for an easy-to-use frontend which connects smoothly with the backend through GraphQL to exchange data efficiently. Additionally, the patient health data is stored securely in MongoDB, ensuring the system is both reliable and capable of handling over 100 patient records. This app is designed to improve patient care by 80% and make healthcare services more efficient.
 
-**Attendance Reporting and Messaging Mobile App**: Designed an innovative mobile application aimed at addressing the issue of manual attendance tracking while facilitating efficient communication between parents and teachers. This application was developed using Kotlin and incorporates Firebase Authentication for secure user login and authorization, along with a convenient Google sign-in option powered by Google OAuth2. To ensure efficient data storage and synchronization, the app utilizes Firebase Realtime Database. Additionally, its user-friendly design ensures a straightforward experience for everyone involved, making it a valuable tool for modern education and classroom management.
+**Attendance Reporting and Messaging App**: Created a mobile app to simplify attendance tracking and improve communication between parents and teachers. The app is built with Kotlin and, to ensure secure logins, it uses Firebase Authentication, including an easy Google sign-in option through Google OAuth2. Additionally, it stores and syncs data using Firebase Realtime Database. Overall, the app is designed to be simple and easy to use, making it a helpful tool for modern classrooms and education management.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2023-present)**: Develop innovative software solutions that drive efficiency, productivity, and user satisfaction through a highly collaborative approach. Collaborated with a dynamic team by having regular interactions, daily standup meetings to sync up on progress, identify roadblocks, and seek assistance. Our culture emphasized ongoing improvement through frequent code reviews, skills assessments and knowledge sharing among team members to maintain high code quality. Staying current with emerging technologies and best practices to ensure the delivery of high-quality software solutions aimed at showcasing expertise and skill sets.
+**Software Developer, Jarvis (2024-present)**: Training in different enterprise technologies, including SQL, Linux Bash, Maven, JDBC, and Java. To date, I have completed projects such as a resource monitoring app in Linux Bash, a SQL exercise project, and a Java-based grep app. Currently, I am developing a Java stock quote app to improve my skills with databases using DAO, DTO, and unit testing. In these projects, we follow Agile/Scrum methodology and focus on continuous improvement through code reviews and assessments of both technical and soft skills.
 
 
 ## Education
@@ -41,6 +41,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 
 
 ## Miscellaneous
-- Engaged in various artistic endeavors, including acrylic painting, drawing, and mural creation.
 - Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop a mobile app designed to help schools manage attendance and communication.
-- Led a team in the building residential structures and demonstrating strong leadership and teamwork skills.
+- Engaged in various artistic activities, such as acrylic painting, charcoal drawing, and creating murals.
+- Led a team in building residential structures and demonstrating strong leadership and teamwork skills.
