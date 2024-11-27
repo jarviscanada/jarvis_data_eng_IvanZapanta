@@ -1,6 +1,6 @@
-package ca.jrvs.apps.jdbc;
+package ca.jrvs.practice.learningjdbc;
 
-import ca.jrvs.apps.jdbc.util.DataTransferObject;
+import ca.jrvs.practice.learningjdbc.util.DataTransferObject;
 
 public class Customer implements DataTransferObject {
 

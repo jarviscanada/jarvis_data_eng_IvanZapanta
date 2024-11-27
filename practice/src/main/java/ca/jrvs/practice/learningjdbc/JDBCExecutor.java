@@ -1,4 +1,4 @@
-package ca.jrvs.apps.jdbc;
+package ca.jrvs.practice.learningjdbc;
 
 import java.sql.Connection;
 import java.sql.SQLException;
