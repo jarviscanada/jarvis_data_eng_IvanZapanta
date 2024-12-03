@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn"> <!-- Status set to "warn" to suppress internal configuration logs -->
+  <Properties>
+    <Property name="layout">%d [%t] %-5level %logger - %m%n</Property>
+  </Properties>
+
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${layout}"/>
+    </Console>
+    <File name="LogFile" fileName="logger.log">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+    </File>
+
+  </Appenders>
+  <Loggers>
+    <Logger name="quotelog" level="info" additivity="false">
+      <AppenderRef ref="LogFile"/>
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

@@ -4,15 +4,21 @@ import static ca.jrvs.apps.jdbc.helpers.JsonParser.toObjectFromJson;
 
 import ca.jrvs.apps.jdbc.dto.Quote;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.Instant;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class QuoteHttpHelper {
 
-  private String API_KEY = "3787dcdcd6msha9a34dafd0ebc68p16a022jsnde1946a9091c";
-  private OkHttpClient client = new OkHttpClient();
+  private static String API_KEY = "3787dcdcd6msha9a34dafd0ebc68p16a022jsnde1946a9091c";
+  private static OkHttpClient client = new OkHttpClient();
+  private static final Logger logger = LogManager.getLogger("quotelog");
 
   /**
    * Fetch latest quote data from Alpha Vantage endpoint
@@ -20,7 +26,7 @@ public class QuoteHttpHelper {
    * @return Quote with latest data
    * @throws IllegalArgumentException - if no data was found for the given symbol.
    */
-  public Quote fetchQuoteInfo(String symbol) throws IllegalArgumentException, IOException {
+  public static Quote fetchQuoteInfo(String symbol) throws IllegalArgumentException {
 
     Request request = new Request.Builder()
         .url("https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol=" + symbol + "&datatype=json")
@@ -32,23 +38,22 @@ public class QuoteHttpHelper {
     try {
       Response response = client.newCall(request).execute();
       String jsonResponse = response.body().string();
-//      System.out.println("Response JSON: " + jsonResponse);
+      logger.info("Response JSON: {}", jsonResponse);
 
       Quote quote = toObjectFromJson(jsonResponse, Quote.class);
-//      System.out.println("Deserialized Quote: " + quote);
+      quote.setTimestamp(Timestamp.from(Instant.now()));
+      logger.info("Deserialized Quote: {}", quote);
 
-      if (quote == null) {
-        throw new IllegalArgumentException("No data found for: " + symbol);
-      }
       return quote;
-
+    } catch (JsonMappingException e) {
+      logger.error("Error mapping JSON for symbol: {}", symbol, e);
     } catch (JsonProcessingException e) {
-      e.printStackTrace();
-      throw new IllegalArgumentException("Error processing JSON response", e);
+      logger.error("Error processing JSON response for symbol: {}", symbol, e);
     } catch (IOException e) {
       e.printStackTrace();
-      throw new IOException("Error fetching data", e);
+      logger.error("Error fetching data for symbol: {}", symbol, e);
     }
+    return null;
   }
 
 }

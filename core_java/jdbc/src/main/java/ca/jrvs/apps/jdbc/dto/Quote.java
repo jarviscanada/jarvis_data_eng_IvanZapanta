@@ -149,6 +149,7 @@ public class Quote {
     sb.append(", previousClose=").append(previousClose);
     sb.append(", change=").append(change);
     sb.append(", changePercent='").append(changePercent).append('\'');
+    sb.append(", timeStamp=").append(timestamp);
     sb.append('}');
     return sb.toString();
   }
