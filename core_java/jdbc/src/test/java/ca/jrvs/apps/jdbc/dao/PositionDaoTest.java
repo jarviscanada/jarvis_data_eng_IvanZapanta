@@ -22,7 +22,7 @@ class PositionDaoTest {
   void setUp() throws SQLException {
     DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
     connection = dcm.getConnection();
-    positionDao = new PositionDao();
+    positionDao = new PositionDao(connection);
     positionDao.setC(connection);
   }
 

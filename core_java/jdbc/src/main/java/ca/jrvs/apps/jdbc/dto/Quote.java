@@ -138,19 +138,21 @@ public class Quote {
 
   @Override
   public String toString() {
-    final StringBuilder sb = new StringBuilder("Quote{");
-    sb.append("ticker='").append(ticker).append('\'');
-    sb.append(", open=").append(open);
-    sb.append(", high=").append(high);
-    sb.append(", low=").append(low);
-    sb.append(", price=").append(price);
-    sb.append(", volume=").append(volume);
-    sb.append(", latestTradingDay=").append(latestTradingDay);
-    sb.append(", previousClose=").append(previousClose);
-    sb.append(", change=").append(change);
-    sb.append(", changePercent='").append(changePercent).append('\'');
-    sb.append(", timeStamp=").append(timestamp);
-    sb.append('}');
+    final StringBuilder sb = new StringBuilder();
+    sb.append("Quote Details:\n");
+    sb.append("--------------------------------------------------------------\n");
+    sb.append(String.format("Ticker: %s%n", ticker));
+    sb.append(String.format("Open: %.2f%n", open));
+    sb.append(String.format("High: %.2f%n", high));
+    sb.append(String.format("Low: %.2f%n", low));
+    sb.append(String.format("Price: %.2f%n", price));
+    sb.append(String.format("Volume: %d%n", volume));
+    sb.append(String.format("Latest Trading Day: %s%n", latestTradingDay));
+    sb.append(String.format("Previous Close: %.2f%n", previousClose));
+    sb.append(String.format("Change: %.2f%n", change));
+    sb.append(String.format("Change Percent: %s%n", changePercent));
+    sb.append(String.format("Timestamp: %s%n", timestamp));
+    sb.append("--------------------------------------------------------------\n");
     return sb.toString();
   }
 }

@@ -159,6 +159,13 @@ public class QuoteDao implements CrudDao<Quote, String> {
     }
   }
 
+  public QuoteDao(Connection c) {
+    this.c = c;
+  }
+
+  public QuoteDao() {
+  }
+
   public Connection getC() {
     return c;
   }

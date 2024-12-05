@@ -23,7 +23,7 @@ class QuoteDaoTest {
   void setUp() throws SQLException {
     DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost", "stock_quote", "postgres", "password");
     connection = dcm.getConnection();
-    quoteDao = new QuoteDao();
+    quoteDao = new QuoteDao(connection);
     quoteDao.setC(connection);
   }
 

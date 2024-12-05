@@ -127,6 +127,13 @@ public class PositionDao implements CrudDao<Position, String> {
     }
   }
 
+  public PositionDao(Connection c) {
+    this.c = c;
+  }
+
+  public PositionDao() {
+  }
+
   public Connection getC() {
     return c;
   }

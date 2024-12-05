@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 public class QuoteHttpHelper {
 
-  private static String API_KEY = "3787dcdcd6msha9a34dafd0ebc68p16a022jsnde1946a9091c";
+  private static String apiKey = "3787dcdcd6msha9a34dafd0ebc68p16a022jsnde1946a9091c";
   private static OkHttpClient client = new OkHttpClient();
   private static final Logger logger = LogManager.getLogger("quotelog");
 
@@ -31,7 +31,7 @@ public class QuoteHttpHelper {
     Request request = new Request.Builder()
         .url("https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol=" + symbol + "&datatype=json")
         .get()
-        .addHeader("x-rapidapi-key", API_KEY)
+        .addHeader("x-rapidapi-key", apiKey)
         .addHeader("x-rapidapi-host", "alpha-vantage.p.rapidapi.com")
         .build();
 
@@ -54,6 +54,11 @@ public class QuoteHttpHelper {
       logger.error("Error fetching data for symbol: {}", symbol, e);
     }
     return null;
+  }
+
+  public QuoteHttpHelper(String apiKey, OkHttpClient client) {
+    this.apiKey = apiKey;
+    this.client = client;
   }
 
 }

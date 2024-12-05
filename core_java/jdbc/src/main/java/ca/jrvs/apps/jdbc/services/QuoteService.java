@@ -10,8 +10,13 @@ public class QuoteService {
   private QuoteDao dao;
   private QuoteHttpHelper httpHelper;
 
-  public QuoteService(QuoteDao quoteDao) {
-    this.dao = quoteDao;
+//  public QuoteService(QuoteDao dao) {
+//    this.dao = dao;
+//  }
+
+  public QuoteService(QuoteDao dao, QuoteHttpHelper httpHelper) {
+    this.dao = dao;
+    this.httpHelper = httpHelper;
   }
 
   /**
@@ -20,7 +25,14 @@ public class QuoteService {
    * @return Latest quote information or empty optional if ticker symbol not found
    */
   public Optional<Quote> fetchQuoteDataFromAPI(String ticker) {
-    return Optional.ofNullable(httpHelper.fetchQuoteInfo(ticker));
-  }
 
+    Quote quote = httpHelper.fetchQuoteInfo(ticker);
+
+    if(quote.getTicker() != null){
+      dao.save(quote);
+    } else {
+      return Optional.empty();
+    }
+    return Optional.of(quote);
+  }
 }
