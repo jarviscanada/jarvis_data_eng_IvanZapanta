@@ -32,11 +32,16 @@ public class Position {
 
   @Override
   public String toString() {
-    final StringBuilder sb = new StringBuilder("Position{");
-    sb.append("ticker='").append(ticker).append('\'');
-    sb.append(", numOfShares=").append(numOfShares);
-    sb.append(", valuePaid=").append(valuePaid);
-    sb.append('}');
+    final StringBuilder sb = new StringBuilder();
+    sb.append("Position Details:\n");
+    sb.append("-------------------------------------\n");
+    sb.append(String.format("Symbol: %s%n", ticker));
+    sb.append(String.format("Number of Shares: %d%n", numOfShares));
+    sb.append(String.format("Value Paid: %.2f%n", valuePaid));
+    sb.append("-------------------------------------\n");
     return sb.toString();
   }
+
+
+
 }

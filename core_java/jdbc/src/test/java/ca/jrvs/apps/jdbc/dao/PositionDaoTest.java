@@ -37,7 +37,7 @@ class PositionDaoTest {
 
   @Test
   void save() {
-    Position newPosition = createTestPosition("FB");
+    Position newPosition = createTestPosition("AAPL");
     Position savedPosition = positionDao.save(newPosition);
 
     assertNotNull(savedPosition);
@@ -48,11 +48,11 @@ class PositionDaoTest {
 
   @Test
   void create() {
-    Position newPosition = createTestPosition("MSFT");
+    Position newPosition = createTestPosition("AAPL");
     Position savedPosition = positionDao.save(newPosition);
 
     assertNotNull(savedPosition);
-    assertEquals("TSLA", savedPosition.getTicker());
+    assertEquals("AAPL", savedPosition.getTicker());
     assertEquals(1000, savedPosition.getNumOfShares());
     assertEquals(50000.00, savedPosition.getValuePaid(), 0.01);
   }

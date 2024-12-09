@@ -1,10 +1,11 @@
 package ca.jrvs.apps.jdbc.services;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -40,36 +41,33 @@ public class QuoteService_UnitTest {
 
   @Test
   public void testFetchQuoteDataFromAPIValidTicker() {
-    String ticker = "AAPL";
-    Quote quote = new Quote();
-    quote.setTicker(ticker);
+    String ticker = "MSFT";
+    Quote mockQuote = new Quote();
+    mockQuote.setTicker(ticker);
 
-    when(mockQuoteHttpHelper.fetchQuoteInfo(ticker)).thenReturn(quote);
-    when(mockQuoteDao.save(any(Quote.class))).thenReturn(quote);
+    when(mockQuoteHttpHelper.fetchQuoteInfo(ticker)).thenReturn(mockQuote);
+    when(mockQuoteDao.save(any(Quote.class))).thenReturn(mockQuote);
 
     Optional<Quote> actualQuote = quoteService.fetchQuoteDataFromAPI(ticker);
 
     assertTrue(actualQuote.isPresent());
-    assertEquals(quote.getTicker(), actualQuote.get().getTicker());
+    assertEquals(ticker, actualQuote.get().getTicker());
 
-    verify(mockQuoteHttpHelper, times(1)).fetchQuoteInfo(ticker);
-    verify(mockQuoteDao.save(quote));
+    verify(mockQuoteDao).save(mockQuote);
   }
 
-//  @Test
-//  public void testFetchQuoteDataFromAPI_InvalidTicker() {
-//    String ticker = "INVALID";
-//
-//    // Mock the behavior of QuoteHttpHelper for invalid ticker
-//    when(mockHttpHelper.fetchQuoteInfo(ticker)).thenReturn(null);
-//
-//    // Call the method under test
-//    Optional<Quote> actualQuote = quoteService.fetchQuoteDataFromAPI(ticker);
-//
-//    // Assert that the result is empty
-//    assertFalse(actualQuote.isPresent());
-//
-//    // Verify that the method was called once
-//    verify(mockHttpHelper, times(1)).fetchQuoteInfo(ticker);
-//  }
+  @Test
+  public void testFetchQuoteDataFromAPIInvalidTicker() {
+    String ticker = "INVALIDTICKER";
+    Quote quote = new Quote();
+    quote.setTicker(null);
+
+    when(mockQuoteHttpHelper.fetchQuoteInfo(ticker)).thenReturn(quote);
+
+    Optional<Quote> result = quoteService.fetchQuoteDataFromAPI(ticker);
+
+    assertFalse(result.isPresent());
+
+    verify(mockQuoteDao, never()).save(any(Quote.class));
+  }
 }

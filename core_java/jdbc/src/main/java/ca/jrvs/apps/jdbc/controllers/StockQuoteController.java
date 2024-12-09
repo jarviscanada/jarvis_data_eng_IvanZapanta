@@ -1,9 +1,10 @@
 package ca.jrvs.apps.jdbc.controllers;
 
+import ca.jrvs.apps.jdbc.dto.Position;
 import ca.jrvs.apps.jdbc.dto.Quote;
 import ca.jrvs.apps.jdbc.services.PositionService;
 import ca.jrvs.apps.jdbc.services.QuoteService;
-import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class StockQuoteController {
     while (true) {
       try {
         System.out.println("Welcome to the Stock Quote App!");
-        System.out.println("Please choose an option by entering the corresponding number:");
+        System.out.println("Please choose an option:");
         System.out.println("1. View stock quote");
         System.out.println("2. Buy shares");
         System.out.println("3. Sell shares");
@@ -54,7 +55,7 @@ public class StockQuoteController {
           default:
             System.out.println("Invalid choice. Please try again.");
         }
-      } catch (InputMismatchException e) {
+      } catch (NoSuchElementException e) {
         System.out.println("Invalid input. Please enter a number.");
         scanner.nextLine();
       } catch (Exception e) {
@@ -86,19 +87,28 @@ public class StockQuoteController {
     double price = scanner.nextDouble();
 
     try {
-//      Position position = positionService.buy(ticker, numberOfShares, price);
-//      System.out.println("Position updated: " + position);
+      Position position = positionService.buy(ticker, numberOfShares, price);
+      System.out.println("Transaction Completed!\n" + position);
     } catch (Exception e) {
       System.out.println("Error while buying shares: " + e.getMessage());
     }
   }
 
-  public void sellShares(Scanner scanner){
-
+  private void sellShares(Scanner scanner) {
+    System.out.print("Enter stock ticker to sell: ");
+    String ticker = scanner.next();
+    try {
+      positionService.sell(ticker);
+      System.out.println("All shares of " + ticker + " have been successfully sold!");
+    } catch (Exception e) {
+      System.out.println("Error while selling shares: " + e.getMessage());
+    }
   }
 
-  public void viewPosition(Scanner scanner){
-
+  private void viewPosition(Scanner scanner) {
+    System.out.print("Enter stock ticker to view position: ");
+    String ticker = scanner.next();
+    Position position = positionService.view(ticker);
+    System.out.println(position);
   }
-
 }

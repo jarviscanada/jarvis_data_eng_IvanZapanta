@@ -45,7 +45,8 @@ public class Main {
       PositionDao pRepo = new PositionDao(c);
       QuoteHttpHelper rcon = new QuoteHttpHelper(properties.get("api-key"), client);
       QuoteService sQuote = new QuoteService(qRepo, rcon);
-      PositionService sPos = new PositionService(pRepo);
+
+      PositionService sPos = new PositionService(pRepo, qRepo);
       StockQuoteController con = new StockQuoteController(sQuote, sPos);
       con.initClient();
     } catch (SQLException e) {

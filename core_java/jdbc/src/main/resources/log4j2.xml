@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="warn"> <!-- Status set to "warn" to suppress internal configuration logs -->
+<Configuration status="WARN"> <!-- Status set to "warn" to suppress internal configuration logs -->
   <Properties>
     <Property name="layout">%d [%t] %-5level %logger - %m%n</Property>
   </Properties>
 
   <Appenders>
-    <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="${layout}"/>
-    </Console>
-    <File name="LogFile" fileName="logger.log">
-      <PatternLayout>
-        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-      </PatternLayout>
+<!--    Print to console-->
+<!--    <Console name="Console" target="SYSTEM_OUT">-->
+<!--      <PatternLayout pattern="${layout}"/>-->
+<!--    </Console>-->
+
+    <File name="LogFile" fileName="logs/application.log">
+<!--        included class on pattern to capture the logger's class name -->
+        <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %class{1} - %msg%n"/>
     </File>
 
+    <File name="ErrorFile" fileName="logs/error.log">
+        <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %class{1} - %msg%n"/>
+        <Filters>
+          <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Filters>
+    </File>
   </Appenders>
+
   <Loggers>
-    <Logger name="quotelog" level="info" additivity="false">
+<!--    Logger for application flow -->
+    <Logger name="infoLog" level="info" additivity="false">
       <AppenderRef ref="LogFile"/>
-      <AppenderRef ref="Console"/>
+<!--      <AppenderRef ref="Console"/>-->
     </Logger>
-    <Root level="error" additivity="false">
-      <AppenderRef ref="Console"/>
+
+<!--    Logger for errors -->
+    <Logger name="errorLog" level="error" additivity="false">
+      <AppenderRef ref="ErrorFile"/>
+<!--      <AppenderRef ref="Console"/>-->
+    </Logger>
+
+    <Root level="info" additivity="false">
+      <AppenderRef ref="LogFile"/>
     </Root>
   </Loggers>
 </Configuration>

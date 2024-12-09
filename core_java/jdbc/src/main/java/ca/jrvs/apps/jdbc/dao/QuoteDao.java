@@ -14,8 +14,8 @@ import org.apache.logging.log4j.Logger;
 public class QuoteDao implements CrudDao<Quote, String> {
 
   private Connection c;
-
-  private static final Logger logger = LogManager.getLogger("quotelog");
+  private static final Logger infoLogger = LogManager.getLogger("infoLog");
+  private static final Logger errorLogger = LogManager.getLogger("errorLog");
 
   private static final String GET_ONE = "SELECT symbol, open, high, low, price, volume, latest_trading_day, previous_close, change, change_percent, timestamp FROM quote WHERE symbol = ?";
 
@@ -34,16 +34,15 @@ public class QuoteDao implements CrudDao<Quote, String> {
     Quote quote;
 
     if(findById(entity.getTicker()).isPresent()){
-      logger.info("Updating '{}' quote.", entity.getTicker());
       quote = update(entity);
     } else {
-      logger.info("Creating '{}' quote.", entity.getTicker());
       quote = create(entity);
     }
     return quote;
   }
 
   public Quote create(Quote entity) {
+    infoLogger.info("Creating quote...");
     try (PreparedStatement statement = this.c.prepareStatement(INSERT)) {
       statement.setString(1, entity.getTicker());
       statement.setDouble(2, entity.getOpen());
@@ -59,11 +58,13 @@ public class QuoteDao implements CrudDao<Quote, String> {
       statement.execute();
       return entity;
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while creating quote. ", e);
       throw new RuntimeException(e);
     }
   }
 
   public Quote update(Quote entity) {
+    infoLogger.info("Updating quote...");
     try (PreparedStatement statement = this.c.prepareStatement(UPDATE)) {
       statement.setDouble(1, entity.getOpen());
       statement.setDouble(2, entity.getHigh());
@@ -79,6 +80,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
       statement.execute();
       return entity;
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while updating quote. ", e);
       throw new RuntimeException(e);
     }
   }
@@ -86,7 +88,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
   @Override
   public Optional<Quote> findById(String s) throws IllegalArgumentException {
     Quote quote = null; // Initialize quote as null to return Optional.empty() when no result is found (for create)
-    logger.info("Finding quote by id.");
+    infoLogger.info("Finding quote by id...");
     try (PreparedStatement statement = this.c.prepareStatement(GET_ONE)) {
       statement.setString(1, s);
       ResultSet resultSet = statement.executeQuery();
@@ -106,15 +108,16 @@ public class QuoteDao implements CrudDao<Quote, String> {
         quote.setTimestamp(resultSet.getTimestamp("timestamp"));
       }
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while finding quote by id. ", e);
       throw new RuntimeException(e);
     }
-    return Optional.ofNullable(quote); // Return Optional.empty() if no quote is found (quote = null -for create)
+    return Optional.ofNullable(quote); // Returns Optional.empty() if no quote is found (quote = null -for create)
   }
 
   @Override
   public Iterable<Quote> findAll() {
     List<Quote> quotes = new ArrayList<>();
-    logger.info("Finding all quotes.");
+    infoLogger.info("Finding all quotes...");
     try(PreparedStatement statement = this.c.prepareStatement(GET_ALL)){
       ResultSet resultSet = statement.executeQuery();
       while (resultSet.next()) {
@@ -133,6 +136,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
         quotes.add(quote);
       }
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while finding all quotes. ", e);
       throw new RuntimeException(e);
     }
     return quotes;
@@ -140,30 +144,29 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
   @Override
   public void deleteById(String s) throws IllegalArgumentException {
-    logger.info("Deleting quote by id.");
+    infoLogger.info("Deleting quote by id...");
     try(PreparedStatement statement = this.c.prepareStatement(DELETE_ONE)){
       statement.setString(1, s);
       statement.execute();
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while deleting quote by id. ", e);
       throw new RuntimeException(e);
     }
   }
 
   @Override
   public void deleteAll() {
-    logger.info("Deleting all quotes.");
+    infoLogger.info("Deleting all quotes...");
     try(PreparedStatement statement = this.c.prepareStatement(DELETE_ALL)){
       statement.execute();
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while deleting all quotes. ", e);
       throw new RuntimeException(e);
     }
   }
 
   public QuoteDao(Connection c) {
     this.c = c;
-  }
-
-  public QuoteDao() {
   }
 
   public Connection getC() {

@@ -46,11 +46,11 @@ class QuoteDaoTest {
 
   @Test
   void save() {
-    Quote newQuote = createTestQuote("TSLA");
+    Quote newQuote = createTestQuote("AAPL");
     Quote savedQuote = quoteDao.save(newQuote);
 
     assertNotNull(savedQuote);
-    assertEquals("TSLA", savedQuote.getTicker());
+    assertEquals("AAPL", savedQuote.getTicker());
     assertEquals(705.00, savedQuote.getPrice(), 0.01);
   }
 

@@ -14,8 +14,8 @@ import org.apache.logging.log4j.Logger;
 public class PositionDao implements CrudDao<Position, String> {
 
   private Connection c;
-
-  private static final Logger logger = LogManager.getLogger("quotelog");
+  private static final Logger infoLogger = LogManager.getLogger("infoLog");
+  private static final Logger errorLogger = LogManager.getLogger("errorLog");
 
   private static final String GET_ONE = "SELECT symbol, number_of_shares, value_paid FROM position WHERE symbol = ?";
 
@@ -34,16 +34,15 @@ public class PositionDao implements CrudDao<Position, String> {
     Position position;
 
     if(findById(entity.getTicker()).isPresent()){
-      logger.info("Updating '{}' position.", entity.getTicker());
       position = update(entity);
     } else {
-      logger.info("Creating '{}' position.", entity.getTicker());
       position = create(entity);
     }
     return position;
   }
 
   public Position create(Position entity){
+    infoLogger.info("Creating position...");
     try(PreparedStatement statement = this.c.prepareStatement(INSERT)){
       statement.setString(1,entity.getTicker());
       statement.setInt(2,entity.getNumOfShares());
@@ -51,11 +50,13 @@ public class PositionDao implements CrudDao<Position, String> {
       statement.execute();
       return entity;
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while creating position. ", e);
       throw new RuntimeException(e);
     }
   }
 
   public Position update(Position entity){
+    infoLogger.info("Updating position...");
     try(PreparedStatement statement = this.c.prepareStatement(UPDATE)){
       statement.setInt(1,entity.getNumOfShares());
       statement.setDouble(2,entity.getValuePaid());
@@ -63,6 +64,7 @@ public class PositionDao implements CrudDao<Position, String> {
       statement.execute();
       return entity;
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while updating position. ", e);
       throw new RuntimeException(e);
     }
   }
@@ -70,7 +72,7 @@ public class PositionDao implements CrudDao<Position, String> {
   @Override
   public Optional<Position> findById(String s) throws IllegalArgumentException {
     Position position = null;
-    logger.info("Finding position by id");
+    infoLogger.info("Finding position by id...");
     try(PreparedStatement statement = this.c.prepareStatement(GET_ONE)){
       statement.setString(1, s);
       ResultSet resultSet = statement.executeQuery();
@@ -82,6 +84,7 @@ public class PositionDao implements CrudDao<Position, String> {
         position.setValuePaid(resultSet.getDouble("value_paid"));
       }
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while finding position by id. ", e);
       throw new RuntimeException(e);
     }
     return Optional.ofNullable(position);
@@ -90,7 +93,7 @@ public class PositionDao implements CrudDao<Position, String> {
   @Override
   public Iterable<Position> findAll() {
     List<Position> positions = new ArrayList<>();
-    logger.info("Finding all positions.");
+    infoLogger.info("Finding all positions...");
     try(PreparedStatement statement = this.c.prepareStatement(GET_ALL)){
       ResultSet resultSet = statement.executeQuery();
       while (resultSet.next()){
@@ -101,6 +104,7 @@ public class PositionDao implements CrudDao<Position, String> {
         positions.add(position);
       }
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while finding all positions. ", e);
       throw new RuntimeException(e);
     }
     return positions;
@@ -108,21 +112,23 @@ public class PositionDao implements CrudDao<Position, String> {
 
   @Override
   public void deleteById(String s) throws IllegalArgumentException {
-    logger.info("Deleting position by id.");
+    infoLogger.info("Deleting position by id...");
     try(PreparedStatement statement = this.c.prepareStatement(DELETE_ONE)){
       statement.setString(1, s);
       statement.execute();
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while deleting position by id. ", e);
       throw new RuntimeException(e);
     }
   }
 
   @Override
   public void deleteAll() {
-    logger.info("Deleting all positions");
+    infoLogger.info("Deleting all positions...");
     try(PreparedStatement statement = this.c.prepareStatement(DELETE_ALL)){
       statement.execute();
     } catch (SQLException e) {
+      errorLogger.error("Error occurred while deleting all positions. ", e);
       throw new RuntimeException(e);
     }
   }

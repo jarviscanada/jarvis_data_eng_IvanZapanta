@@ -1,0 +1,25 @@
+2024-12-06 14:40:47 ERROR QuoteDao - Error occurred while creating quote. 
+org.postgresql.util.PSQLException: No value specified for parameter 12.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:257) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:292) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:143) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:132) ~[postgresql-42.2.5.jar:42.2.5]
+	at ca.jrvs.apps.jdbc.dao.QuoteDao.create(QuoteDao.java:60) [classes/:?]
+	at ca.jrvs.apps.jdbc.dao.QuoteDao.save(QuoteDao.java:41) [classes/:?]
+	at ca.jrvs.apps.jdbc.JDBCExecutor.main(JDBCExecutor.java:76) [classes/:?]
+2024-12-08 11:09:57 ERROR PositionDao - Error occurred while creating position. 
+org.postgresql.util.PSQLException: ERROR: insert or update on table "position" violates foreign key constraint "symbol_fk"
+  Detail: Key (symbol)=(FB) is not present in table "quote".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:143) ~[postgresql-42.2.5.jar:42.2.5]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:132) ~[postgresql-42.2.5.jar:42.2.5]
+	at ca.jrvs.apps.jdbc.dao.PositionDao.create(PositionDao.java:50) ~[classes/:?]
+	at ca.jrvs.apps.jdbc.dao.PositionDao.save(PositionDao.java:39) ~[classes/:?]
+	at ca.jrvs.apps.jdbc.dao.PositionDaoTest.save(PositionDaoTest.java:41) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]

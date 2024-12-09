@@ -139,9 +139,9 @@ public class Quote {
   @Override
   public String toString() {
     final StringBuilder sb = new StringBuilder();
-    sb.append("Quote Details:\n");
-    sb.append("--------------------------------------------------------------\n");
-    sb.append(String.format("Ticker: %s%n", ticker));
+    sb.append("Quote Details\n");
+    sb.append("--------------------------------------------------\n");
+    sb.append(String.format("Symbol: %s%n", ticker));
     sb.append(String.format("Open: %.2f%n", open));
     sb.append(String.format("High: %.2f%n", high));
     sb.append(String.format("Low: %.2f%n", low));
@@ -152,7 +152,7 @@ public class Quote {
     sb.append(String.format("Change: %.2f%n", change));
     sb.append(String.format("Change Percent: %s%n", changePercent));
     sb.append(String.format("Timestamp: %s%n", timestamp));
-    sb.append("--------------------------------------------------------------\n");
+    sb.append("--------------------------------------------------\n");
     return sb.toString();
   }
 }
