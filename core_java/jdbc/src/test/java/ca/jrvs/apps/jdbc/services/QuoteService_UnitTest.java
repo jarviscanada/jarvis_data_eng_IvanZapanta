@@ -1,8 +1,6 @@
 package ca.jrvs.apps.jdbc.services;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -44,6 +42,7 @@ public class QuoteService_UnitTest {
     String ticker = "MSFT";
     Quote mockQuote = new Quote();
     mockQuote.setTicker(ticker);
+    mockQuote.setPrice(100.00);
 
     when(mockQuoteHttpHelper.fetchQuoteInfo(ticker)).thenReturn(mockQuote);
     when(mockQuoteDao.save(any(Quote.class))).thenReturn(mockQuote);
@@ -52,22 +51,26 @@ public class QuoteService_UnitTest {
 
     assertTrue(actualQuote.isPresent());
     assertEquals(ticker, actualQuote.get().getTicker());
+    assertEquals("Price of returned quote should match mock price", 100.00, actualQuote.get().getPrice(), 0.0);
 
     verify(mockQuoteDao).save(mockQuote);
   }
 
   @Test
   public void testFetchQuoteDataFromAPIInvalidTicker() {
-    String ticker = "INVALIDTICKER";
+    String invalidTicker = "INVALIDTICKER";
     Quote quote = new Quote();
     quote.setTicker(null);
 
-    when(mockQuoteHttpHelper.fetchQuoteInfo(ticker)).thenReturn(quote);
+    when(mockQuoteHttpHelper.fetchQuoteInfo(invalidTicker)).thenReturn(quote);
 
-    Optional<Quote> result = quoteService.fetchQuoteDataFromAPI(ticker);
+    Optional<Quote> actualQuote = quoteService.fetchQuoteDataFromAPI(invalidTicker);
 
-    assertFalse(result.isPresent());
+    assertFalse(actualQuote.isPresent());
+    assertNull("Ticker should be null", quote.getTicker());
+    assertEquals("Price should be 0.0 for invalid ticker", 0.0, quote.getPrice(), 0.0);
 
     verify(mockQuoteDao, never()).save(any(Quote.class));
+
   }
 }

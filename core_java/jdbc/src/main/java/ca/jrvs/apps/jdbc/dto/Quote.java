@@ -1,14 +1,11 @@
 package ca.jrvs.apps.jdbc.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-@JsonInclude(Include.NON_NULL)
 @JsonRootName("Global Quote")
 @JsonPropertyOrder({
     "01. symbol",

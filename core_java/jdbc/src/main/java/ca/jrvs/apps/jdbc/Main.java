@@ -3,36 +3,20 @@ package ca.jrvs.apps.jdbc;
 import ca.jrvs.apps.jdbc.controllers.StockQuoteController;
 import ca.jrvs.apps.jdbc.dao.PositionDao;
 import ca.jrvs.apps.jdbc.dao.QuoteDao;
+import ca.jrvs.apps.jdbc.helpers.PropertyLoader;
 import ca.jrvs.apps.jdbc.helpers.QuoteHttpHelper;
 import ca.jrvs.apps.jdbc.services.PositionService;
 import ca.jrvs.apps.jdbc.services.QuoteService;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.Map;
 import okhttp3.OkHttpClient;
 
 public class Main {
 
   public static void main(String[] args) {
-    Map<String, String> properties = new HashMap<>();
-    try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/properties.txt"))) {
-      String line;
-      while ((line = br.readLine()) != null) {
-        String[] tokens = line.split(":");
-        properties.put(tokens[0], tokens[1]);
-      }
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
+    Map<String, String> properties = PropertyLoader.loadProperties();
     try {
       Class.forName(properties.get("db-class"));
     } catch (ClassNotFoundException e) {
@@ -53,5 +37,4 @@ public class Main {
       e.printStackTrace();
     }
   }
-
 }
