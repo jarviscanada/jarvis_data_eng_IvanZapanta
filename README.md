@@ -1,47 +1,48 @@
-# Ivan Zapanta . Jarvis Consulting
+# Ivan Joshua Zapanta . Jarvis Consulting
 
-I am a backend developer who excels in building efficient solutions and user-friendly interfaces, and I thrive on staying at the forefront of technology. I began my career in architecture but have since discovered a deep passion for software engineering. I've gained valuable experience through personal and school projects, making me a skilled professional in JavaScript, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, and other technologies. My passion for software continues to drive me, and I am eager to leverage my design and technology skills to make a meaningful impact in the ever-evolving tech industry.
+I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe solutions are just around the corner, and my goal is to turn those solutions into reality through software that addresses business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
 
 ## Skills
 
-**Proficient:** Javascript, C#, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Spring Boot, Maven, Python, Agile/Scrum, Git
 
-**Competent:** Java, React/Angular, Linux/Bash, Python, MySql
+**Competent:** JavaScript, React, Angular, Linux, NodeJs, C#
 
-**Familiar:** Docker, Kotlin, React Native, AWS, Azure
+**Familiar:** Docker, AWS, React Native, Kotlin, Tableau
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/linux_sql)]: Implemented a solution to efficiently record and monitor hardware specifications and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team's CentOS 7 Linux cluster. The program was implemented using Bash scripts, with PostgreSQL serving as the  RDBMS for data storage to facilitate future resource planning. Agent scripts were scheduled via cron, and the source code was managed on GitHub using Git, while Docker was employed for database provisioning, ensuring ease of deployment.This resulted in delivering an MVP that effectively addresses the LCA team's business needs.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/linux_sql)]: Developed a solution to track hardware specs and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team. The solution used Bash scripts for implementation, with PostgreSQL as the database. Agent scripts ran via cron, and the source code was managed on GitHub with Git. Docker was used for database provisioning, making deployment easier. This resulted in an MVP that successfully met the LCA team's needs.
 
-**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/sql)]: Crafted SQL queries in a series of practice exercises aimed at improving SQL skills  within the context of a relational database management system (RDBMS), specifically PostgreSQL. These exercises encompassed different SQL concepts, such as basic queries, JOIN operations, aggregation, and string manipulation. This project served as a valuable learning experience, enabling me to enhance my SQL proficiency through query-solving challenges.
+**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/sql)]: Completed series of SQL queries through practice exercise using PostgreSQL. The exercises covered various SQL concepts, including basic queries, JOIN operations, aggregation, and string manipulation. Overall, the project helped me enhanced my SQL proficiency by solving different query challenges.
 
-**Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/master/core_java/grep)]: Developed a Java Grep application, a Java-based counterpart of Linux's grep command, facilitating the search for specific regular expression patterns within a root directory, with recursive search capabilities and the option to specify an output file for results. The application has been containerized into a Docker image, readily accessible on DockerHub. The development involved leveraging Java for core functionality, Lambda and Stream APIs for efficient data processing, Docker for containerization, Maven for project management, and IntelliJ as the integrated development environment. This results in successfully creating a powerful, user-friendly tool for text data management, with the added convenience of cross-platform accessibility through Docker containerization.
+**Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/grep)]: Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.
+
+**Stock Quote App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/jdbc)]: Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.
 
 
 ## Highlighted Projects
-**Patient Health Monitoring System Web App**: Created a sophisticated Patient Health Tracker System by utilizing the power of React and JavaScript for a feature-rich frontend. The application's frontend communicates smoothly with the backend through GraphQL, optimizing data exchanges. Patient health data is securely stored and retrieved using MongoDB, guaranteeing the system's reliability and scalability, with a demonstrated capacity to handle over 100+ patient records. Overall, the project is expected to deliver an efficient healthcare data management system, leading to a 80% increase in patient care quality and a boost in healthcare service efficiency.
+**Patient Health Tracker App**: Developed a health tracking application using React and JavaScript for an easy-to-use frontend which connects smoothly with the backend through GraphQL to exchange data efficiently. Additionally, the patient health data is stored securely in MongoDB, ensuring the system is both reliable and capable of handling over 100 patient records. This app is designed to improve patient care by 80% and make healthcare services more efficient.
 
-**Attendance Reporting and Messaging Mobile App**: Designed an innovative mobile application aimed at addressing the issue of manual attendance tracking while facilitating efficient communication between parents and teachers. This application was developed using Kotlin and incorporates Firebase Authentication for secure user login and authorization, along with a convenient Google sign-in option powered by Google OAuth2. To ensure efficient data storage and synchronization, the app utilizes Firebase Realtime Database. Additionally, its user-friendly design ensures a straightforward experience for everyone involved, making it a valuable tool for modern education and classroom management.
+**Attendance Reporting and Messaging App**: Created a mobile app to simplify attendance tracking and improve communication between parents and teachers. The app is built with Kotlin and, to ensure secure logins, it uses Firebase Authentication, including an easy Google sign-in option through Google OAuth2. Additionally, it stores and syncs data using Firebase Realtime Database. Overall, the app is designed to be simple and easy to use, making it a helpful tool for modern classrooms and education management.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2023-present)**: Develop innovative software solutions that drive efficiency, productivity, and user satisfaction through a highly collaborative approach. Collaborated with a dynamic team by having regular interactions, daily standup meetings to sync up on progress, identify roadblocks, and seek assistance. Our culture emphasized ongoing improvement through frequent code reviews, skills assessments and knowledge sharing among team members to maintain high code quality. Staying current with emerging technologies and best practices to ensure the delivery of high-quality software solutions aimed at showcasing expertise and skill sets.
+**Software Developer, Jarvis (2024-present)**: Training in different enterprise technologies, including SQL, Linux Bash, Maven, JDBC, and Java. To date, I have completed projects such as a resource monitoring app in Linux Bash, a SQL exercise project, a Java-based grep app, and a JDBC stock quote app. In these projects, we follow Agile/Scrum methodology and focus on continuous improvement through code reviews and assessments of both technical and soft skills.
 
 
 ## Education
 **Centennial College (2021-2023)**, Software Engineering Technology, Engineering Technology and Applied Science
 - Achieved Honors Distinction
-- GPA: 3.9/4.5
 
 **University of the Assumption (2013-2019)**, Bachelor of Science in Architecture, Engineering and Architecture
 
 
 ## Miscellaneous
-- Arts, Painting, Drawing: Engaged in various artistic endeavors, including acrylic painting, drafting, and mural creation.
-- Participant, Centennial College Entrepreneurship Program: Collaborated with team of 3 to develop a mobile app that help schools manage their attendance and communication.
-- Volunteer, San Fernando Community: Lead team of 10 volunteers building houses, showcasing leadership and teamwork skills.
+- Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop a mobile app designed to help schools manage attendance and communication.
+- Engaged in various artistic activities, such as acrylic painting, charcoal drawing, and creating murals.
+- Led a team in building residential structures, ensuring projects were completed on time and to high standards through strong leadership and teamwork.
