@@ -2,28 +2,29 @@ package ca.jrvs.practice.codingChallenge;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class OddEvenTest {
-  private OddEven oddEven;
 
-  @Before
-  public void setUp() throws Exception {
-    oddEven = new OddEven();
+  @Test
+  public void testEvenNumber() {
+    assertEquals("even", OddEven.oddEvenMod(4));
   }
 
   @Test
-  public void oddEvenMod() {
-    assertEquals("odd", oddEven.oddEvenMod(3));
-    assertEquals("even", oddEven.oddEvenMod(2));
-    assertEquals("even", oddEven.oddEvenMod(-4));
+  public void testOddNumber() {
+    assertEquals("odd", OddEven.oddEvenMod(1));
   }
 
   @Test
-  public void oddEvenBit() {
-    assertNull(oddEven.oddEvenBit(2));
+  public void testNegativeNumber() {
+    assertEquals("even", OddEven.oddEvenMod(-2));
+    assertEquals("odd", OddEven.oddEvenMod(-1));
   }
 
+  @Test
+  public void testZero() {
+    assertEquals("even", OddEven.oddEvenMod(0));
+  }
 
 }
