@@ -37,7 +37,7 @@
       "name": "Cluster Monitor"
     },
     {
-      "description": "Completed series of SQL queries through practice exercise using PostgreSQL. The exercises covered various SQL concepts, including basic queries, JOIN operations, aggregation, and string manipulation. Overall, the project helped me enhance my SQL proficiency by solving different query challenges.",
+      "description": "Completed series of SQL queries through practice exercise using PostgreSQL. The exercises covered various SQL concepts, including basic queries, JOIN operations, aggregation, and string manipulation. Overall, the project helped me enhanced my SQL proficiency by solving different query challenges.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/sql",
       "name": "RDBMS and SQL"
     },
@@ -45,6 +45,11 @@
       "description": "Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/grep",
       "name": "Grep App"
+    },
+    {
+      "description": "Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/jdbc",
+      "name": "Stock Quote App"
     }
   ],
   "name": "Ivan Joshua Zapanta",
@@ -53,7 +58,7 @@
       "bullets": [
         "Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop a mobile app designed to help schools manage attendance and communication.",
         "Engaged in various artistic activities, such as acrylic painting, charcoal drawing, and creating murals.",
-        "Led a team in building residential structures and demonstrating strong leadership and teamwork skills."
+        "Led a team in building residential structures, ensuring projects were completed on time and to high standards through strong leadership and teamwork."
       ],
       "title": "Activities/Hobbies"
     }
@@ -61,7 +66,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Training in different enterprise technologies, including SQL, Linux Bash, Maven, JDBC, and Java. To date, I have completed projects such as a resource monitoring app in Linux Bash, a SQL exercise project, and a Java-based grep app. Currently, I am developing a Java stock quote app to improve my skills with databases using DAO, DTO, and unit testing. In these projects, we follow Agile/Scrum methodology and focus on continuous improvement through code reviews and assessments of both technical and soft skills.",
+      "description": "Training in different enterprise technologies, including SQL, Linux Bash, Maven, JDBC, and Java. To date, I have completed projects such as a resource monitoring app in Linux Bash, a SQL exercise project, a Java-based grep app, and a JDBC stock quote app. In these projects, we follow Agile/Scrum methodology and focus on continuous improvement through code reviews and assessments of both technical and soft skills.",
       "duration": "2024-present",
       "title": "Software Developer"
     }
@@ -69,8 +74,9 @@
   "skills": {
     "competent": [
       "JavaScript",
-      "React/Angular",
-      "Linux/Bash",
+      "React",
+      "Angular",
+      "Linux",
       "NodeJs",
       "C#"
     ],
@@ -83,11 +89,12 @@
     ],
     "proficient": [
       "Java",
-      "Spring Boot/Maven",
+      "Spring Boot",
+      "Maven",
       "Python",
       "Agile/Scrum",
       "Git"
     ]
   },
-  "summary": "I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe that innovative solutions are always possible, and my goal is to create impactful software that addresses real-world business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake."
+  "summary": "I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe solutions are just around the corner, and my goal is to turn those solutions into reality through software that addresses business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake."
 }
