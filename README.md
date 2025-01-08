@@ -1,12 +1,12 @@
 # Ivan Joshua Zapanta . Jarvis Consulting
 
-I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe solutions are just around the corner, and my goal is to turn those solutions into reality through software that addresses business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
+I'm a frontend developer who has created intuitive and visually appealing web applications. With a strong academic background in software engineering, I specialize in building interactive interfaces, full-stack development, and data engineering. I love transforming ideas into interactive solutions that not only look great but are also functional. My goal is to bring innovative designs to life, making digital experiences more engaging and accessible. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
 
 ## Skills
 
-**Proficient:** Java, Spring Boot, Maven, Python, Agile/Scrum, Git
+**Proficient:** JavaScript, React, Java, Agile/Scrum, Git
 
-**Competent:** JavaScript, React, Angular, Linux, NodeJs, C#
+**Competent:** C#, Linux, Python, NodeJs, Spring Boot, Maven
 
 **Familiar:** Docker, AWS, React Native, Kotlin, Tableau
 
@@ -27,7 +27,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 ## Highlighted Projects
 **Patient Health Tracker App**: Developed a health tracking application using React and JavaScript for an easy-to-use frontend which connects smoothly with the backend through GraphQL to exchange data efficiently. Additionally, the patient health data is stored securely in MongoDB, ensuring the system is both reliable and capable of handling over 100 patient records. This app is designed to improve patient care by 80% and make healthcare services more efficient.
 
-**Attendance Reporting and Messaging App**: Created a mobile app to simplify attendance tracking and improve communication between parents and teachers. The app is built with Kotlin and, to ensure secure logins, it uses Firebase Authentication, including an easy Google sign-in option through Google OAuth2. Additionally, it stores and syncs data using Firebase Realtime Database. Overall, the app is designed to be simple and easy to use, making it a helpful tool for modern classrooms and education management.
+**Portfolio Website**: Developed a personal portfolio website to showcase my skills, projects, and professional achievements. The website is built with React, Next.js and Tailwind CSS with a focus on clean, responsive design. It includes sections for project overviews, about, skills and link icons. The site is hosted on Vercel, and it emphasizes responsive design, user experience, and accessibility, making it easy for potential viewers to explore my work.
 
 
 ## Professional Experiences

@@ -13,27 +13,26 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: "I am a software developer who enjoys solving problems and turning ideas into solutions. With a strong academic background in software engineering, I specialize in full-stack development and data engineering. I believe solutions are just around the corner, and my goal is to turn those solutions into reality through software that addresses business challenges. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake."
+summary: "I'm a frontend developer who has created intuitive and visually appealing web applications. With a strong academic background in software engineering, I specialize in building interactive interfaces, full-stack development, and data engineering. I love transforming ideas into interactive solutions that not only look great but are also functional. My goal is to bring innovative designs to life, making digital experiences more engaging and accessible. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake."
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
 skills:
   # At least 5 skills
   proficient:
+    - JavaScript
+    - React
     - Java
-    - Spring Boot
-    - Maven
-    - Python
     - Agile/Scrum
     - Git
   # At least 5 skills
   competent:
-    - JavaScript
-    - React
-    - Angular
-    - Linux
-    - NodeJs
     - C#
+    - Linux
+    - Python
+    - NodeJs
+    - Spring Boot
+    - Maven
   # At least 5 skills
   familiar:
     - Docker
@@ -65,9 +64,9 @@ highlighted_projects:
     git_url:
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Developed a health tracking application using React and JavaScript for an easy-to-use frontend which connects smoothly with the backend through GraphQL to exchange data efficiently. Additionally, the patient health data is stored securely in MongoDB, ensuring the system is both reliable and capable of handling over 100 patient records. This app is designed to improve patient care by 80% and make healthcare services more efficient."
-  - name: "Attendance Reporting and Messaging App"
+  - name: "Portfolio Website"
     git_url:
-    description: "Created a mobile app to simplify attendance tracking and improve communication between parents and teachers. The app is built with Kotlin and, to ensure secure logins, it uses Firebase Authentication, including an easy Google sign-in option through Google OAuth2. Additionally, it stores and syncs data using Firebase Realtime Database. Overall, the app is designed to be simple and easy to use, making it a helpful tool for modern classrooms and education management."
+    description: "Developed a personal portfolio website to showcase my skills, projects, and professional achievements. The website is built with React, Next.js and Tailwind CSS with a focus on clean, responsive design. It includes sections for project overviews, about, skills and link icons. The site is hosted on Vercel, and it emphasizes responsive design, user experience, and accessibility, making it easy for potential viewers to explore my work."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
