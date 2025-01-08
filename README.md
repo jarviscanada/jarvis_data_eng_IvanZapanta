@@ -4,7 +4,7 @@ I'm a frontend developer who has created intuitive and visually appealing web ap
 
 ## Skills
 
-**Proficient:** JavaScript, React, Java, Agile/Scrum, Git
+**Proficient:** JavaScript, React, HTML5, CSS3, Java, Agile/Scrum, Git
 
 **Competent:** C#, Linux, Python, NodeJs, Spring Boot, Maven
 
