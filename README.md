@@ -1,10 +1,10 @@
 # Ivan Joshua Zapanta . Jarvis Consulting
 
-I'm a frontend developer who has created intuitive and visually appealing web applications. With a strong academic background in software engineering, I specialize in building interactive interfaces, full-stack development, and data engineering. I love transforming ideas into interactive solutions that not only look great but are also functional. My goal is to bring innovative designs to life, making digital experiences more engaging and accessible. As I advance in my career, I am committed to continuous growth and meaningful contributions to every project I undertake.
+I am a software developer who enjoys solving problems and turning ideas into  effective solutions. With a strong academic background in software engineering, I have worked on projects using frontend technologies like React and Angular, as well as back-end technologies such as Node.js, GraphQL, and MongoDB, focusing on creating smooth and responsive websites. Some of my key projects include a health tracker app, weather app, todo app, and a portfolio website, each designed with intuitive interfaces and functionality to enhance user experience and engagement. My goal is to create innovative, engaging, and accessible digital experiences while continuously growing and contributing meaningfully to each project I undertake.
 
 ## Skills
 
-**Proficient:** JavaScript, React, HTML5, CSS3, Java, Agile/Scrum, Git
+**Proficient:** JavaScript, React, Java, Agile/Scrum, Git, HTML5, CSS3
 
 **Competent:** C#, Linux, Python, NodeJs, Spring Boot, Maven
 
@@ -17,11 +17,11 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/linux_sql)]: Developed a solution to track hardware specs and real-time resource usage for the Jarvis Linux Cluster Administration (LCA) team. The solution used Bash scripts for implementation, with PostgreSQL as the database. Agent scripts ran via cron, and the source code was managed on GitHub with Git. Docker was used for database provisioning, making deployment easier. This resulted in an MVP that successfully met the LCA team's needs.
 
-**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/sql)]: Completed series of SQL queries through practice exercise using PostgreSQL. The exercises covered various SQL concepts, including basic queries, JOIN operations, aggregation, and string manipulation. Overall, the project helped me enhanced my SQL proficiency by solving different query challenges.
+**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/sql)]: Completed a series of SQL queries using PostgreSQL for learning purposes, focusing on developing and demonstrating my SQL proficiency.
 
 **Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/grep)]: Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.
 
-**Stock Quote App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/jdbc)]: Developed a Java-based Grep application, similar to Linux's grep command, for searching regular expression patterns within a root directory. It supports recursive searching and allows users to specify an output file for results. The project used Java, Java Stream and IO APIs for data processing, Maven for project management, and Docker for containerization. This created a powerful, user-friendly tool for managing text data.
+**Stock Quote App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_IvanZapanta/tree/develop/core_java/jdbc)]: Created an application that allows users to fetch real-time stock quote data, buy and sell stocks, and manage their portfolios and current positions. It uses JDBC to connect to a PostgreSQL database for performing CRUD operations. The latest stock data is retrieved from the Alpha Vantage API, ensuring up-to-date information for users. This application provides an efficient way for users to manage their investments and stay updated with market changes.
 
 
 ## Highlighted Projects
@@ -43,6 +43,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_IvanZapant
 
 
 ## Miscellaneous
-- Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop a mobile app designed to help schools manage attendance and communication.
+- Collaborated with a team of three in the Centennial College Entrepreneurship Program to develop an android mobile app designed to help schools manage attendance and communication.
 - Engaged in various artistic activities, such as acrylic painting, charcoal drawing, and creating murals.
 - Led a team in building residential structures, ensuring projects were completed on time and to high standards through strong leadership and teamwork.
