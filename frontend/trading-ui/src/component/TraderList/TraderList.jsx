@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "antd/dist/antd.css";
 import "./TraderList.scss";
 import { useState, useEffect } from "react";
-import TraderListData from "./TraderListData.json";
+// import TraderListData from "./TraderListData.json";
 import { faTrashAlt as deleteIcon } from "@fortawesome/free-solid-svg-icons";
 
 function TraderList(props) {
@@ -54,15 +54,21 @@ function TraderList(props) {
   ];
 
   const [tableColumns, setTableColumns] = useState(columns);
-  const [dataSource, setDataSource] = useState([]);
+  // const [dataSource, setDataSource] = useState([]);
 
-  useEffect(() => {
-    const dataSource = TraderListData;
-    setDataSource(dataSource);
-  });
+  // useEffect(() => {
+  //   const dataSource = TraderListData;
+  //   setDataSource(dataSource);
+  // });
 
   return (
-    <Table dataSource={dataSource} columns={tableColumns} pagination={false} />
+    // <Table dataSource={dataSource} columns={tableColumns} pagination={false} />
+    <Table
+      dataSource={props.traders}
+      columns={tableColumns}
+      pagination={false}
+      rowKey="id"
+    />
   );
 }
 
