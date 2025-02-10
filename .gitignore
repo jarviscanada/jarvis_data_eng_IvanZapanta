@@ -5,5 +5,7 @@ target/
 *.ear
 *.logs
 *.iml
+*.xml
 .idea/
 .eclipse
+node_modules/
