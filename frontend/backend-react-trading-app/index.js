@@ -12,26 +12,20 @@ app.use(bodyParser.json());
 // sample data
 let traders = [
   {
-    key: "1",
     id: 1,
     firstName: "Mike",
     lastName: "Spencer",
     dob: "1990-01-01",
     country: "Canada",
     email: "mike@test.com",
-    amount: 0,
-    actions: "<button (click)='deleteTrader'>Delete Trader</button>",
   },
   {
-    key: "2",
     id: 2,
     firstName: "Hellen",
     lastName: "Miller",
     dob: "1990-01-01",
     country: "Austria",
     email: "hellen@test.com",
-    actions: "<button (click)='deleteTrader'>Delete Trader</button>",
-    amount: 0,
   },
 ];
 
@@ -63,12 +57,12 @@ let quotes = [
 ];
 
 // fetch all traders
-app.get("/dashboard/traders", (req, res) => {
+app.get("/traders", (req, res) => {
   res.json(traders);
 });
 
 // fetch all quotes
-app.get("/quotes/dailyList", (req, res) => {
+app.get("/quotes", (req, res) => {
   res.json(quotes);
 });
 

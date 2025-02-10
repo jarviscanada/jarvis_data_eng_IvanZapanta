@@ -1,0 +1,158 @@
+{
+  "traders": [
+    {
+      "id": "1",
+      "firstName": "Mike",
+      "lastName": "Spencer",
+      "dob": "1990-01-01",
+      "country": "Canada",
+      "email": "mike@test.com"
+    },
+    {
+      "id": "9c1d",
+      "firstName": "Keelie",
+      "lastName": "Jordan",
+      "email": "xopel@mailinator.com",
+      "dob": "2009-04-02",
+      "country": "Rerum labore ad eum "
+    },
+    {
+      "id": "9659",
+      "firstName": "Iola",
+      "lastName": "Jones",
+      "email": "vagagosibo@mailinator.com",
+      "dob": "2015-02-03",
+      "country": "Tempore soluta aut "
+    },
+    {
+      "id": "a392",
+      "firstName": "Susan",
+      "lastName": "Mcgee",
+      "email": "jehihut@mailinator.com",
+      "dob": "1983-09-04",
+      "country": "Consequatur Non nis"
+    },
+    {
+      "id": "0573",
+      "firstName": "Armando",
+      "lastName": "Byers",
+      "email": "tifysumuz@mailinator.com",
+      "dob": "1971-01-05",
+      "country": "Corporis hic et face"
+    },
+    {
+      "id": "74a9",
+      "firstName": "Lucian",
+      "lastName": "Dejesus",
+      "email": "gigoku@mailinator.com",
+      "dob": "2018-05-08",
+      "country": "Accusantium omnis vi"
+    },
+    {
+      "id": "6a0f",
+      "firstName": "Imogene",
+      "lastName": "Roberson",
+      "email": "byfi@mailinator.com",
+      "dob": "1994-04-24",
+      "country": "Incididunt esse mag"
+    }
+  ],
+  "quotes": [
+    {
+      "ticker": "AAPL",
+      "lastPrice": 172.85,
+      "bidPrice": 172.8,
+      "bidSize": 1500,
+      "askPrice": 172.9,
+      "askSize": 1200
+    },
+    {
+      "ticker": "GOOG",
+      "lastPrice": 2831.54,
+      "bidPrice": 2830.5,
+      "bidSize": 2000,
+      "askPrice": 2832.1,
+      "askSize": 1800
+    },
+    {
+      "ticker": "TSLA",
+      "lastPrice": 210.35,
+      "bidPrice": 210.2,
+      "bidSize": 1200,
+      "askPrice": 210.5,
+      "askSize": 1100
+    },
+    {
+      "ticker": "AMZN",
+      "lastPrice": 3342.12,
+      "bidPrice": 3341,
+      "bidSize": 1500,
+      "askPrice": 3343,
+      "askSize": 1400
+    },
+    {
+      "ticker": "MSFT",
+      "lastPrice": 295.87,
+      "bidPrice": 295.5,
+      "bidSize": 1800,
+      "askPrice": 296.1,
+      "askSize": 1600
+    },
+    {
+      "ticker": "NFLX",
+      "lastPrice": 572.48,
+      "bidPrice": 572,
+      "bidSize": 1300,
+      "askPrice": 573,
+      "askSize": 1200
+    },
+    {
+      "ticker": "NVDA",
+      "lastPrice": 576.2,
+      "bidPrice": 575.8,
+      "bidSize": 1500,
+      "askPrice": 576.5,
+      "askSize": 1400
+    },
+    {
+      "ticker": "META",
+      "lastPrice": 316.15,
+      "bidPrice": 315.8,
+      "bidSize": 1400,
+      "askPrice": 316.5,
+      "askSize": 1300
+    },
+    {
+      "ticker": "DIS",
+      "lastPrice": 118.55,
+      "bidPrice": 118.3,
+      "bidSize": 1100,
+      "askPrice": 118.7,
+      "askSize": 1000
+    },
+    {
+      "ticker": "PYPL",
+      "lastPrice": 90.42,
+      "bidPrice": 90.1,
+      "bidSize": 800,
+      "askPrice": 90.6,
+      "askSize": 900
+    },
+    {
+      "ticker": "BA",
+      "lastPrice": 221.33,
+      "bidPrice": 221,
+      "bidSize": 1000,
+      "askPrice": 221.5,
+      "askSize": 950
+    },
+    {
+      "ticker": "SPY",
+      "lastPrice": 400.8,
+      "bidPrice": 400.5,
+      "bidSize": 1200,
+      "askPrice": 401,
+      "askSize": 1300
+    }
+  ]
+}
