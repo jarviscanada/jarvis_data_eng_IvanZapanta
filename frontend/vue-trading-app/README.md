@@ -52,7 +52,7 @@ Once both the backend and frontend are running, you can access the app at `http:
 
 ## Architecture
 
-![App Architecture](/vue-trading-app/public/trading-app.png)
+![App Architecture](./public/trading-app.png)
 
 ## Application Structure
 

@@ -70,7 +70,7 @@ The frontend is built using React and includes:
 
 The application follows a client-server architecture where the frontend React app communicates with the backend via API requests. Below is a simple diagram representing the architecture:
 
-![App Architecture](/react-trading-app/public/trading-app.png)
+![App Architecture](./public/trading-app.png)
 
 ## Test
 
